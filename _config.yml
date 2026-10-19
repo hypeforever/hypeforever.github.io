@@ -4,7 +4,7 @@ title: "Hype Forever: Dev Blog"
 description: >
   Development blog of Hype Forever. We plan on posting regular updates
   about the development progress & things we consider interesting :)
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hypeforever.github.io" # the base hostname & protocol for your site
 lang: en
 
