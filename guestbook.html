@@ -1,0 +1,45 @@
+---
+layout: page
+title: Guestbook
+permalink: /guestbook/
+---
+{% comment %}
+  Read-only archive of the old webs.com guestbook. The entries live in
+  _data/guestbook.yml. All text is escaped, so links in entries stay plain text.
+{% endcomment %}
+{% assign entries = site.data.guestbook | reverse %}
+
+<blockquote>
+  <p>Leave here a comment on the site!</p>
+</blockquote>
+
+<p>
+  This is an archive of the guestbook of the old Hype Forever site. It is
+  read-only, so new comments can't be added anymore. The entries were
+  recovered from the
+  <a href="https://web.archive.org/web/2022/https://hypeforever.webs.com/apps/guestbook/">Internet Archive</a>,
+  which didn't save every page, so some entries are missing. Spam has been
+  removed.
+</p>
+
+<h2 id="entries">{{ entries.size }} Comments</h2>
+
+<ol class="guestbook">
+  {% for entry in entries %}
+  <li class="guestbook-entry" id="comment-{{ entry.id }}">
+    <p class="guestbook-meta">
+      <span class="guestbook-name">{{ entry.name | escape }}</span>
+      <time datetime="{{ entry.date | date: '%Y-%m-%d' }}">{{ entry.date | date: "%B %-d, %Y" }}</time>
+    </p>
+
+    {% if entry.quote %}
+    <blockquote class="guestbook-quote">
+      <p><strong>{{ entry.quote_name | escape }} says…</strong></p>
+      <p>{{ entry.quote | escape | newline_to_br }}</p>
+    </blockquote>
+    {% endif %}
+
+    <p>{{ entry.text | escape | newline_to_br }}</p>
+  </li>
+  {% endfor %}
+</ol>
