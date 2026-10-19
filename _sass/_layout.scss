@@ -200,6 +200,13 @@
         margin-top: 0;
     }
 
+    // Images on pages are centered, like on the old webs.com site
+    .page & img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     > :last-child {
         margin-bottom: 0;
     }

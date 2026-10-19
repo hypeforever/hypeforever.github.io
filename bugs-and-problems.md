@@ -116,7 +116,7 @@ having troubles while installing Hype. Thank you, wimbertolf! : )
 
 Our member Marin (Enost) uploaded some save folders, that you can save over if
 you get the savegame error in the German version:
-<http://www.mediafire.com/download/g46actdrdf7fbd3/SaveGame.rar>
+[SaveGame.rar]({{ "/assets/downloads/savegames/german-savegame.rar" | relative_url }})
 
 ## Hype The Time Quest - Polish Version
 
