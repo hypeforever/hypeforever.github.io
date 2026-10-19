@@ -88,6 +88,39 @@ a {
     }
 }
 
+
+/**
+ * Definition lists
+ */
+dt {
+    color: $heading-color;
+}
+
+dd {
+    margin: 0 0 $spacing-unit / 3 $spacing-unit;
+}
+
+/**
+ * Tables
+ */
+table {
+    @extend %vertical-rhythm;
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+        padding: 4px 10px;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid $border-color;
+    }
+
+    th {
+        color: $heading-color;
+        border-bottom-color: $border-color-dark;
+    }
+}
+
 /**
  * Blockquotes and code
  */
