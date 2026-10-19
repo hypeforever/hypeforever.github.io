@@ -1,0 +1,48 @@
+---
+layout: default
+---
+{% comment %}
+  One photo album. The page file in _albums/ is named like the album's slug,
+  everything else comes from _data/photos.yml.
+{% endcomment %}
+{% assign album = site.data.photos | where: "slug", page.slug | first %}
+
+<section class="box album">
+
+  <header class="box-header">
+    <h1 class="box-title">{{ album.title | default: album.slug }}</h1>
+  </header>
+
+  <div class="box-content">
+    {% if album.description != "" %}
+    <p class="album-description">{{ album.description }}</p>
+    {% endif %}
+
+    <p class="album-meta">
+      <a href="{{ "/photos/" | relative_url }}">&laquo; Back to Gallery</a>
+      | {{ album.photos.size }} {% if album.photos.size == 1 %}Photo{% else %}Photos{% endif %}
+      | Updated {{ album.updated | date: "%B %-d, %Y" }}
+      {% if album.owner != "" %}
+      | by {% if album.owner_url != "" %}<a href="{{ album.owner_url }}">{{ album.owner }}</a>{% else %}{{ album.owner }}{% endif %}
+      {% endif %}
+    </p>
+
+    <ul class="photo-grid">
+      {% for photo in album.photos %}
+        <li class="photo-card">
+          <a class="photo-thumb" href="{{ photo.file | relative_url }}"
+             data-pswp-width="{{ photo.width }}" data-pswp-height="{{ photo.height }}">
+            <img src="{{ photo.thumb | relative_url }}" width="{{ photo.thumb_width }}" height="{{ photo.thumb_height }}" alt="{{ photo.title | escape }}" loading="lazy">
+          </a>
+          {% if photo.title != "" or photo.description != "" %}
+          <div class="photo-caption">
+            {% if photo.title != "" %}<p class="photo-title">{{ photo.title }}</p>{% endif %}
+            {% if photo.description != "" %}<p class="photo-description">{{ photo.description }}</p>{% endif %}
+          </div>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</section>

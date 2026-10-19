@@ -341,6 +341,69 @@
 }
 
 /**
+ * Photo gallery: album page
+ */
+.album {
+    .album-description {
+        margin-bottom: 8px;
+    }
+
+    .album-meta {
+        margin-bottom: 20px;
+    }
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px 15px;
+    list-style: none;
+    margin: 0;
+
+    @include media-query($on-palm) {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 15px 10px;
+    }
+}
+
+.photo-card {
+    margin: 0;
+}
+
+.photo-thumb {
+    display: block;
+
+    img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+        transition: box-shadow .2s;
+    }
+
+    &:hover img {
+        box-shadow: 0 0 0 3px $accent-color;
+    }
+}
+
+.photo-caption {
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+
+    p {
+        margin: 0;
+    }
+}
+
+.photo-title {
+    color: $text-color;
+}
+
+/**
  * Guestbook archive
  */
 .guestbook {
