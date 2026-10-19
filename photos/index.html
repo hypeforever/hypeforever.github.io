@@ -26,12 +26,14 @@ title: Photos
             <img src="{{ cover.thumb | relative_url }}" width="{{ cover.thumb_width }}" height="{{ cover.thumb_height }}" alt="" loading="lazy">
           </a>
           <h2 class="album-title">
-            <a href="{{ "/photos/" | append: album.slug | append: "/" | relative_url }}">{{ album.title }}</a>
+            <a href="{{ "/photos/" | append: album.slug | append: "/" | relative_url }}">{{ album.title | default: album.slug }}</a>
           </h2>
           <p class="album-meta">
             {{ album.photos.size }} {% if album.photos.size == 1 %}Photo{% else %}Photos{% endif %}
-            | Updated {{ album.updated | date: "%B %-d, %Y" }}<br>
-            by <a href="{{ album.owner_url }}">{{ album.owner }}</a>
+            | Updated {{ album.updated | date: "%B %-d, %Y" }}
+            {% if album.owner != "" %}
+            <br>by {% if album.owner_url != "" %}<a href="{{ album.owner_url }}">{{ album.owner }}</a>{% else %}{{ album.owner }}{% endif %}
+            {% endif %}
           </p>
         </li>
       {% endfor %}
