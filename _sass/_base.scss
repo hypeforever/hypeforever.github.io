@@ -15,7 +15,20 @@ dl, dd, ol, ul, figure {
 }
 
 html {
-    background: #3a5f78 url("../assets/images/layout/background.jpg") no-repeat center center fixed;
+    background-color: #3a5f78;
+}
+
+// Fixed background image. A fixed pseudo-element is used instead of
+// `background-attachment: fixed`, which mobile Safari does not support.
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: url("../assets/images/layout/background.jpg") no-repeat center center;
     background-size: cover;
 }
 

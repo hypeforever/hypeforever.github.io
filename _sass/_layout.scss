@@ -5,6 +5,10 @@
     max-width: $site-width;
     margin: 0 auto;
     padding: 10px 15px $spacing-unit;
+
+    @include media-query($on-palm) {
+        padding: 10px 10px $spacing-unit / 2;
+    }
 }
 
 /**
@@ -21,6 +25,10 @@
         display: block;
         width: 100%;
         border-radius: $radius-banner;
+
+        @include media-query($on-palm) {
+            border-radius: $radius-sidebar;
+        }
     }
 }
 
@@ -30,6 +38,12 @@
 .site-body {
     display: flex;
     align-items: flex-start;
+
+    // On small screens the sidebar sits above the content
+    @include media-query($on-palm) {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 .sidebar {
@@ -38,6 +52,12 @@
     padding: $spacing-unit 25px 20px;
     background: $box-color;
     border-radius: $radius-sidebar;
+
+    @include media-query($on-palm) {
+        flex-basis: auto;
+        margin: 0 0 10px;
+        padding: 15px 20px;
+    }
 }
 
 .site-main {
@@ -52,6 +72,13 @@
     ul {
         list-style: none;
         margin: 0;
+
+        // Two columns on small screens to keep the menu short
+        @include media-query($on-palm) {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            column-gap: 20px;
+        }
     }
 
     li {
@@ -65,6 +92,13 @@
         font-size: $small-font-size;
         color: $text-color;
         border-bottom: 1px solid $border-color;
+
+        // Keep each entry on one line in the two-column layout
+        @include media-query($on-palm) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
         &:hover,
         &.active {
@@ -81,11 +115,22 @@
 .site-footer {
     margin-top: $spacing-unit;
     font-size: $small-font-size;
+
+    @include media-query($on-palm) {
+        margin-top: 15px;
+    }
 }
 
 .social-links {
     list-style: none;
     margin: 0;
+
+    // In one row on small screens
+    @include media-query($on-palm) {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
 
     li {
         margin-bottom: 4px;
@@ -114,11 +159,21 @@
     border-radius: $radius-box;
     padding: 20px 25px 25px;
     margin-bottom: 15px;
+
+    @include media-query($on-palm) {
+        border-radius: $radius-sidebar;
+        padding: 15px 15px 20px;
+    }
 }
 
 .box-header {
     margin: 0 -13px 20px;
     padding: 0 13px 6px;
+
+    @include media-query($on-palm) {
+        margin: 0 -5px 15px;
+        padding: 0 5px 6px;
+    }
     border-bottom: 1px solid $border-color-dark;
     text-align: center;
 }
@@ -157,6 +212,13 @@
     .home-image {
         float: left;
         margin: 0 25px 15px 0;
+
+        // Too narrow for text beside the image: center it above the text
+        @include media-query($on-palm) {
+            float: none;
+            display: block;
+            margin: 0 auto 15px;
+        }
     }
 
     .home-signature {
@@ -173,6 +235,10 @@
 
         img {
             width: 75%;
+
+            @include media-query($on-palm) {
+                width: 100%;
+            }
         }
     }
 }
