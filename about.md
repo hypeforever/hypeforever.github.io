@@ -30,9 +30,11 @@ the moment.
   visit this website. This brought in our 5 first members, who all joined in
   2010.
 - In 2011, there wasn't a single new member joining Hype Forever.
-- In 2012 our only new member was our faithful Diego (Restrek).
+- In 2012 our only new member was our faithful Diego
+  ([Restrek](http://hypeforever.webs.com/apps/profile/101390347/)).
 - In January 2013, Hype Forever had only a dozen members, and almost none of
-  them were very active. I was about to delete the site when thexdeity joined
+  them were very active. I was about to delete the site when
+  [thexdeity](http://hypeforever.webs.com/apps/profile/105226754/) joined
   it, and brought activity in with his Let's Play Videos, posts and friendly
   support. That was the main factor that encouraged me to add the downloads,
   the soundtrack, the fixes and all, which brought many more members to the
@@ -42,7 +44,13 @@ the moment.
   remake and a sequel of the original Hype The Time Quest game, created for new
   generations and people willing to replay the game, in a improved way. The
   project is currently being worked on, with members from the Hype community,
-  such as Me, Enost, Paiki Pe, Eddex, Bearmadrid, Melted Plastyk and others.
+  such as [Me](http://hypeforever.webs.com/apps/profile/50609089/),
+  [Enost](http://hypeforever.webs.com/apps/profile/107962693/),
+  [Paiki Pe](http://hypeforever.webs.com/apps/profile/116325162/),
+  [Eddex](http://hypeforever.webs.com/apps/profile/114955113/),
+  [Bearmadrid](http://hypeforever.webs.com/apps/profile/113647136/),
+  [Melted Plastyk](http://hypeforever.webs.com/apps/profile/116937282/) and
+  others.
   When we have something ready, it will be avaliable here on Hype Forever, as a
   free download for everyone. Special thanks for Marin (Enost), who is helping
   me to coordinate the project, as the co-project leader.
