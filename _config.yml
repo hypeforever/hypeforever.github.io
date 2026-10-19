@@ -1,18 +1,12 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
+# Changes to this file are not picked up by `jekyll serve`, restart the server instead.
 title: "Hype Forever: Dev Blog"
-# email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Development blog of Hype Forever. We plan on posting regular updates
   about the development progress & things we consider interesting :)
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://hypeforever.github.io" # the base hostname & protocol for your site
+lang: en
 
 # Social media
 facebook_group_name: hypeforever
@@ -22,3 +16,8 @@ github_username: hypeforever
 
 # Build settings
 markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
