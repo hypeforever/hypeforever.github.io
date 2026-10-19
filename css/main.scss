@@ -15,8 +15,8 @@ $spacing-unit:            30px;
 
 // Colors (taken from the old hypeforever.webs.com design)
 $text-color:              #666;
-$text-color-light:        #949494;
-$heading-color:           #888;
+$text-color-light:        #737373; // original: #949494, darkened for contrast (WCAG AA)
+$heading-color:           #666; // original: #888, darker than body text for hierarchy
 $accent-color:            #26a2c4;
 $border-color:            #dedede;
 $border-color-dark:       #bdbdbd;

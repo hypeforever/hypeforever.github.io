@@ -27,6 +27,12 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+// Selected text: light accent background with dark text for good contrast
+::selection {
+    background: lighten($accent-color, 40%);
+    color: #222;
+}
+
 /**
  * Vertical rhythm
  */
