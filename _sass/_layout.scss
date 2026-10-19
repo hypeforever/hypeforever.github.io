@@ -195,6 +195,14 @@
     h1 { font-size: 22px; }
     h2 { font-size: 19px; }
     h3 { font-size: 17px; }
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
 }
 
 /**

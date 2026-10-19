@@ -1,6 +1,14 @@
 ---
 layout: default
 ---
+{% comment %}
+  Like on the old webs.com site, every "## Heading" starts a new box.
+  Text before the first heading goes into a box with the page title.
+{% endcomment %}
+{% assign sections = content | split: '<h2' %}
+{% assign intro = sections[0] | strip %}
+
+{% if intro != "" or sections.size == 1 %}
 <article class="box page">
 
   <header class="box-header">
@@ -8,7 +16,38 @@ layout: default
   </header>
 
   <div class="box-content">
-    {{ content }}
+    {{ intro }}
   </div>
 
 </article>
+{% endif %}
+
+{% for section in sections offset: 1 %}
+  {% assign head = section | split: '</h2>' | first %}
+  {% assign attrs = head | split: '>' | first %}
+  {% assign heading = head | remove_first: attrs | remove_first: '>' %}
+  {% assign body = section | remove_first: head | remove_first: '</h2>' %}
+
+<section class="box page">
+
+  {% if forloop.first and intro == "" %}
+  <header class="box-header">
+    <h1 class="box-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="box-content">
+    <h2{{ attrs }}>{{ heading }}</h2>
+    {{ body }}
+  </div>
+  {% else %}
+  <header class="box-header">
+    <h2 class="box-title"{{ attrs }}>{{ heading }}</h2>
+  </header>
+
+  <div class="box-content">
+    {{ body }}
+  </div>
+  {% endif %}
+
+</section>
+{% endfor %}
