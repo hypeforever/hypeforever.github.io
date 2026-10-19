@@ -403,6 +403,33 @@
     color: $text-color;
 }
 
+// Caption inside the PhotoSwipe lightbox (see assets/js/gallery.js)
+.pswp__caption {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 8px 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 8px;
+    overflow-wrap: break-word;
+
+    p {
+        margin: 0;
+    }
+
+    .photo-title {
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
 /**
  * Guestbook archive
  */
