@@ -1,0 +1,19 @@
+# Main navigation in the sidebar (in this order)
+- title: Blog
+  url: /blog/
+- title: About Hype Forever
+  url: /about/
+- title: Cheats, Hints and Trivia
+  url: /cheats-hints-and-trivia/
+- title: Downloads
+  url: /downloads/
+- title: Bugs and Problems
+  url: /bugs-and-problems/
+- title: Music – Soundtrack
+  url: /music-soundtrack/
+- title: Photos
+  url: /photos/
+- title: Videos
+  url: /videos/
+- title: Links
+  url: /links/

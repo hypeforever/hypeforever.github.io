@@ -1,0 +1,21 @@
+<aside class="sidebar">
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul>
+      {% for item in site.data.navigation %}
+      <li>
+        {% if page.url == item.url %}
+        <a href="{{ item.url | relative_url }}" class="active" aria-current="page">{{ item.title }}</a>
+        {% elsif page.layout == "post" and item.url == "/blog/" %}
+        <a href="{{ item.url | relative_url }}" class="active">{{ item.title }}</a>
+        {% else %}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {% include footer.html %}
+
+</aside>

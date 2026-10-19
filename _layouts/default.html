@@ -5,15 +5,19 @@
 
   <body>
 
-    {% include header.html %}
+    <div class="site">
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+      {% include header.html %}
+
+      <div class="site-body">
+        {% include sidebar.html %}
+
+        <main class="site-main">
+          {{ content }}
+        </main>
       </div>
-    </div>
 
-    {% include footer.html %}
+    </div>
 
   </body>
 

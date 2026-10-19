@@ -2,22 +2,38 @@
 layout: default
 ---
 
-<div class="home">
+<section class="box home">
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="box-content">
+    <p class="home-logo">
+      <img src="{{ "/assets/images/layout/logo.png" | relative_url }}" width="368" height="200" alt="Hype: The Time Quest Forever">
+    </p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <img class="home-image" src="{{ "/assets/images/layout/home-image.jpg" | relative_url }}" width="183" height="213" alt="Knight from Hype: The Time Quest">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <p>
+      Welcome to Hype The Time Quest Forever!<br>
+      Here you'll find photos, pictures, downloads and more on the game
+      Hype The Time Quest.
+    </p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    {% if site.facebook_group_id %}
+    <p>
+      If you feel like, join us at our
+      <b><a href="https://facebook.com/groups/{{ site.facebook_group_id }}">Facebook group</a></b>.
+    </p>
+    {% endif %}
 
-</div>
+    <p>
+      Special thanks to <b>Alain Tascan</b>, for directing this wonderful game,
+      and <b>Robbi Finkel</b>, for composing its unique soundtrack.
+    </p>
+
+    <p class="home-signature">-NeoMoonlighter</p>
+
+    <p class="home-divider">
+      <img src="{{ "/assets/images/layout/divider.png" | relative_url }}" width="584" height="92" alt="">
+    </p>
+  </div>
+
+</section>

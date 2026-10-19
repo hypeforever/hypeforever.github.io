@@ -1,9 +1,9 @@
 # Site settings
 # Changes to this file are not picked up by `jekyll serve`, restart the server instead.
-title: "Hype Forever: Dev Blog"
+title: "Hype: The Time Quest Forever"
 description: >
-  Development blog of Hype Forever. We plan on posting regular updates
-  about the development progress & things we consider interesting :)
+  Fan site for the game Hype: The Time Quest, with cheats, downloads,
+  music, photos, videos and the Hype Forever blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hypeforever.github.io" # the base hostname & protocol for your site
 lang: en
@@ -16,6 +16,12 @@ github_username: hypeforever
 
 # Build settings
 markdown: kramdown
+
+# Keep the URLs from the time the site lived under /blog
+permalink: /blog/:year/:month/:day/:title:output_ext
+
+feed:
+  path: blog/feed.xml
 
 plugins:
   - jekyll-feed

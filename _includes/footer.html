@@ -1,40 +1,21 @@
 <footer class="site-footer">
 
-  <div class="wrapper">
+  <ul class="social-links">
+    {% if site.github_username %}
+    <li>
+      {% include icon-github.html username=site.github_username %}
+    </li>
+    {% endif %}
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    {% if site.facebook_group_name and site.facebook_group_id %}
+    <li>
+      {% include icon-facebook.html group_name=site.facebook_group_name group_id=site.facebook_group_id %}
+    </li>
+    {% endif %}
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          {% if site.email %}
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.facebook_group_name and site.facebook_group_id %}
-          <li>
-            {% include icon-facebook.html group_name=site.facebook_group_name group_id=site.facebook_group_id %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
-    </div>
-
-  </div>
+    <li>
+      <a href="{{ site.feed.path | default: "feed.xml" | relative_url }}"><i class="fa-solid fa-rss icon" aria-hidden="true"></i><span class="username">Feed</span></a>
+    </li>
+  </ul>
 
 </footer>

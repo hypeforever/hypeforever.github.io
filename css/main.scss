@@ -3,48 +3,39 @@
 ---
 @charset "utf-8";
 
+// Note: GitHub Pages compiles with Ruby Sass 3.7, so no `@use` or `math.div`.
 
-
-// Our variables
+// Fonts
 $base-font-family:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:          16px;
-$base-font-weight:        400;
 $small-font-size:         $base-font-size * 0.875;
 $base-line-height:        1.5;
 
 $spacing-unit:            30px;
 
-$text-color:              #111;
-$background-color:        #fdfdfd;
-$background-color-footer: #ededed;
-$brand-color:             #2a7ae2;
+// Colors (taken from the old hypeforever.webs.com design)
+$text-color:              #666;
+$text-color-light:        #949494;
+$heading-color:           #888;
+$accent-color:            #26a2c4;
+$border-color:            #dedede;
+$border-color-dark:       #bdbdbd;
+$box-color:               #fff;
 
-$grey-color:              #828282;
-$grey-color-light:        lighten($grey-color, 40%);
-$grey-color-dark:         darken($grey-color, 25%);
+// Layout
+$site-width:              1100px;
+$sidebar-width:           220px;
+$radius-banner:           22px;
+$radius-box:              20px;
+$radius-sidebar:          15px;
 
-// Width of the content area
-$content-width:           800px;
+$on-palm:                 800px;
 
-$on-palm:                 600px;
-$on-laptop:               800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
     }
 }
-
-
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
