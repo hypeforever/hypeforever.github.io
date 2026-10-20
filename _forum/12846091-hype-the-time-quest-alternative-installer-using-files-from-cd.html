@@ -1,0 +1,129 @@
+---
+title: "Hype: The Time Quest - Alternative Installer (using files from CD)"
+topic_id: 12846091
+category: hype-related-projects
+sticky: false
+started_by: "SuicideMachine"
+last_post: "2014-05-17 12:28"
+posts:
+  - id: 62039509
+    author: "SuicideMachine"
+    author_id: 126084162
+    rank: "Member"
+    date: "2014-05-03 13:17"
+    signature: false
+    body: |-
+      <p>Hi there! I guess at first it would be nice to introduce who I am - well, I'm nobody. Over a year ago, I've stumbled upon a website called <b>PCGamingWiki</b>, which basically gathers fixes to many games. Somehow I got hooked in what they do, which led to revisiting many old games and figuring out how to make them work. One of such games was <b>Hype: The Time Quest</b>. Odly enough, I was able to figure out how to get it running without stumbling upon your website - although admitably, I'm still not completely sure about its long-term stability, as I just can't force myself to replay through entire game.</p>
+      <p>Anyway, the point is - the way I write pages on PCGW, forced to to explain what to do step by step. Irronically, quite a long time ago I was already thinking, that if I had a knowladge or at least somewhat similar installer, I could potentially rewrite it to work with Hype The Time Quest. I've tried few poor atempts to doing just that using my very limited knowladge of C++ and NSIS - fruitlessly. And today, by accident I've found a "source code" of Lego Racers Alternative Installer, which did just what I was hoping to find - looked for a specific file, unique to Lego Racers CD and if found - used files from this CD to install the game.</p>
+      <p>So I spent few hours learning and rewritting and came up with an alternative installer for Hype The Time Quest. Which obviously needs some testing.</p>
+      <p>You can find it at my <a href="http://pcgamingwiki.com/wiki/User:Suicide_machine/Research_bunker#Alternative_installer" rel="nofollow noopener">PCGW subpage</a> or simply download it here - <a href="https://dl.dropboxusercontent.com/u/31872371/Hype%20-%20The%20Time%20Quest%20Alternate%20Installer%201.0.0.exe" rel="nofollow noopener">https://dl.dropboxusercontent.com/u/31872371/Hype%20-%20The%20Time%20Quest%20Alternate%20Installer%201.0.0.exe</a> (that formatting seems to bug out for some reason).</p>
+      <p>What's the point of it? Basically to have an installer that can be publically distributed without the risk of publisher chasing someone for it, as it contains no files from original game and instead looks for a CD of a game and takes files from this CD.</p>
+      <p>Just keep in mind, it won't work with version other than <b>English</b> and <b>Polish</b> (it will throw an error during the installation). To make it work with other versions, I'm going to need names of folders on Hype CD in <b>X:\LangData</b> (if I understand the way it works, it's going to be the same as the language set in <b>%WINDIR%\Ubisoft\ubi.ini</b>). Plus translate few additional lines to these languages:</p>
+      <ul><li>English.DiskSpaceMBLabel=<b>At least 400 MB of free disk space is required</b>.</li><li>StatusInstallingCompatibilityFixes=<b>Adding compatibility fixes...</b><br></li><li>InstallnGlide=<b>Install nGlide</b></li><li>StatusInstallingnGlide=<b>Installing nGlide...</b></li></ul>
+      <p>If someone needs a look into a source files, because they affraid I've put a virus or something in it - they can be found - http://<a href="https://www.dropbox.com/sh/dt8ltdzn2sa2upn/W0ZjiT2LFl" rel="nofollow noopener">https://www.dropbox.com/sh/dt8ltdzn2sa2upn/W0ZjiT2LFl</a>.</p>
+      <p>Keep in mind I'm not a programming guru, so don't expect me to fix a game aside from a few simple fixes from Compatibility Administrator.</p>
+      <p>Cheers! 8)</p>
+      <p><b>To do:</b></p>
+      <ul><li>Make the installer work with German release of the game (possibly French as well)</li><li>Add a licence about the use of the installer (ergo - that I take not responsibility for its misbehaviour etc [shouldn't as I've tested it with both Polish and English version, but who knows].)</li><li>Add a warning that other Ubisoft titles (Rayman 2?) may stop working due to (possible) sharing of the same config file.<br></li></ul>
+      <p><b>Tested on:</b></p>
+      <ul><li><b>Windows XP SP3</b> - English CD - It's not really required to even use the alternative installer, nevertheless installer works - it requires uninstalling compatiblity fixes (found in Comp directory, after the installation), as explorer.exe apparently doesn't understand Disable DWM.</li><li><b>Windows 7</b> - English and Polish CD - Works without problems</li><li><b>Windows 8.1</b> - English CD - Works without problems.<br></li></ul>
+  - id: 62040659
+    author: "HeroHype"
+    author_id: 121768707
+    rank: "Moderator"
+    date: "2014-05-03 14:24"
+    signature: true
+    body: |-
+      <p>This is awesome man!</p>
+      <p>If you need help at german version i speak german (for German</p>
+      <p>instruction) and on my PC the german version runs ;) (if you need names of folders on Hype CD in X:\LangData</p>
+  - id: 62041085
+    author: "SuicideMachine"
+    author_id: 126084162
+    rank: "Member"
+    date: "2014-05-03 14:51"
+    signature: false
+    body: |-
+      <p>Basically what I need for German version (or any version, I think) is:</p>
+      <p>Check how the folder in <b>X:\LangData</b> is called - is it <b>German</b> or <b>Deutsch</b> or whatever it's in there. I also think the folder named in the same way can be found in <b>X:\Gamedata\World\Sound\</b>. Also go to <b>C:Widows\Ubisoft</b> (or simply %WINDIR%\Ubisoft) and check the language <b>ubi.ini</b> config file - I think it's the same as the language folder - if not, I'll have to rewrite the whole <b>[INI]</b> section - hopefully it's the same. It should work as long as the file structure is the same (ergo - someone responsible for localized released didn't decide to use a completely different installer)</p>
+      <p>As for lines that needs to be translated, it's only:</p>
+      <ul><li>At least 400 MB of free disk space is required.</li><li>Adding compatibility fixes...</li><li>Install nGlide (a choice during installation)</li><li>Installing nGlide...</li></ul>
+      <p>As the rest of lines is provided by Inno Setup. Sadly, I don't think I'll be able to make an installer to display localized: "Is there a Hype - The Time Quest CD in your computer? If not, please insert it and press OK." - I just have no clue how to do it. So it'll have to remain in English.</p>
+  - id: 62041429
+    author: "HeroHype"
+    author_id: 121768707
+    rank: "Moderator"
+    date: "2014-05-03 15:14"
+    signature: true
+    body: |-
+      <p>X:\LangData\German</p>
+      <p>X:\Gamedata\World\Sound\German</p>
+      <p>The ubi.ini file is in English but which language folder do you mean?</p>
+      <p>For translation look Inbox ;)</p>
+  - id: 62041755
+    author: "SuicideMachine"
+    author_id: 126084162
+    rank: "Member"
+    date: "2014-05-03 15:38"
+    signature: false
+    body: |-
+      <p>Weird, maybe it's unique for German version. For Polish I had to change the language in Ubi.ini to Polish or otherwise, all the characters were mute.</p>
+      <p>OK - nevermind. It seems like it actually has no effect, when you take from <b>X:\Gamedata\World\Sound\Polish</b> and put them into <b>C:\Hype\GamedataWorld\Sound</b> instead of <b>C:\Hype\Gamedata\World\Sound\Polish</b>. So that should make things even easier.</p>
+  - id: 62042719
+    author: "SuicideMachine"
+    author_id: 126084162
+    rank: "Member"
+    date: "2014-05-03 16:37"
+    signature: false
+    body: |-
+      <p>I added German to the installer (a friend helped me to translate). Just someone needs to test whatever it works.</p>
+  - id: 62060036
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2014-05-04 17:43"
+    signature: true
+    body: |-
+      <p>I just gotta love my fellow members....for real. I hadn't seen this before, and I am extremelly happy that you made this! I will test it as soon as I can. Thank you a ton for this, it will save some people a lot of trouble : )</p>
+  - id: 62066616
+    author: "SuicideMachine"
+    author_id: 126084162
+    rank: "Member"
+    date: "2014-05-05 00:31"
+    signature: false
+    body: |-
+      <p>Seems like me experimenting with Compatibility modes led to a creating a bug with a game being unable to save the game or create save files. Lesson learnt. Fixed both a package of fixes that I uploaded to PCGW as well as what installer installs.</p>
+  - id: 62131824
+    author: "SuicideMachine"
+    author_id: 126084162
+    rank: "Member"
+    date: "2014-05-09 15:02"
+    signature: false
+    body: |-
+      <p>OK, so I've played through the entire game. I've changed renderer to dgVoodoo, but it doesn't matter - the point is. Installer works and the game can be played from begginning to an end. If something happens using nGlide - it's the nGlide's fault, not the fault of my installer. I'm thinking about rewritting the part with a language, so that you choose which language the CD is during the installation, instead of it being simply tied to which language of the installer you're using... but I don't know. Either way, it's functional.</p>
+  - id: 62248184
+    author: "HeroHype"
+    author_id: 121768707
+    rank: "Moderator"
+    date: "2014-05-17 05:43"
+    signature: true
+    body: |-
+      <p>So where i can download the German installer ?</p>
+  - id: 62250042
+    author: "SuicideMachine"
+    author_id: 126084162
+    rank: "Member"
+    date: "2014-05-17 10:45"
+    signature: false
+    body: |-
+      <p>It's under the same dropbox link - <a href="https://dl.dropboxusercontent.com/u/31872371/Hype%20-%20The%20Time%20Quest%20Alternate%20Installer%201.0.0.exe" rel="nofollow noopener">https://dl.dropboxusercontent.com/u/31872371/Hype%20-%20The%20Time%20Quest%20Alternate%20Installer%201.0.0.exe</a></p>
+      <p>You simply choose Deutch instead of English or Polish for the language of the installer. Although, now when I think about it, I could have just made the installer all in English and a make the choice of the game version in Components section - would be easier to implement other language versions like this and that would be less confusing for people (as some may have English version of the game, but choose Deutch as the language of the installation [which results in error]).... I'll probably do just that.</p>
+  - id: 62251008
+    author: "SuicideMachine"
+    author_id: 126084162
+    rank: "Member"
+    date: "2014-05-17 12:28"
+    signature: false
+    body: |-
+      <p>OK, so I've removed other languages for installer (I can add them back later, if it's needed). Now, instead of having a location connected to a language of the installer, you simply choose appropriate option in Installer Components (Language files). It's easier for a user to realize where the problem is, when an installer throw an error about X directory missing. Plus I can expend more easily if someone needs some more options for it or I can adjust it more easily if some localized versions are packed in the different way than Polish, English (and German?) are. And I don't have to ask people to translate lines for installer.</p>
+---

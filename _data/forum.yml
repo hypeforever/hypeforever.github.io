@@ -1,0 +1,70 @@
+# Categories of the old forum "The Inn" (hypeforever.webs.com/apps/forums/),
+# in the original order. Topics live in the _forum collection.
+- group: "Welcome"
+  categories:
+    - id: 2561804
+      slug: general-discussion
+      title: "General Discussion"
+      description: "Discuss anything Hype-related here"
+    - id: 14417526
+      slug: the-wee-lad
+      title: "The Wee Lad"
+      description: "New To The Forum? Don't know how to do something? Please read this."
+    - id: 2900007
+      slug: administration
+      title: "Administration"
+      description: "If you want to contact me, ask for something, just drop by."
+    - id: 14388182
+      slug: important-notes-and-annoucements
+      title: "Important Notes and Annoucements"
+      description: "ALWAYS CHECK THIS."
+- group: "The Game"
+  categories:
+    - id: 2562041
+      slug: cheats-and-hints
+      title: "Cheats and Hints"
+      description: "Discuss Cheat codes and hints here."
+    - id: 2938599
+      slug: help
+      title: "Help"
+      description: "Do you need help in any part of the game?Ask for it here!"
+    - id: 5620146
+      slug: technical-stuff
+      title: "Technical Stuff"
+      description: "Bugs and other technical issues may be discussed here."
+    - id: 15198347
+      slug: requests
+      title: "Requests"
+      description: "Do you have a special request? Do you need specific saves, files or other service to be done for you? Ask for it in here. Don't forget to read the \"Request Rules\"."
+- group: "General Hype"
+  categories:
+    - id: 14417389
+      slug: playmobil-collectables
+      title: "Playmobil Collectables"
+      description: "Discuss and post pictures of your own playmobil figures of Hype - The Time Quest, as well information on figures for sale."
+    - id: 14417393
+      slug: art-corner
+      title: "Art Corner"
+      description: "Hype Fanarts, fanfics and other artistic production should be posted here."
+    - id: 14671209
+      slug: hype-related-projects
+      title: "Hype-related Projects"
+      description: "Have you been inspired by Hype and it's adventures? Are you creating something based on Hype? Let us know!"
+- group: "Off Topic"
+  categories:
+    - id: 2968910
+      slug: off-topic
+      title: "Off topic"
+      description: "If you have something to discuss that do not relate to Hype The Time Quest in any way post it here."
+    - id: 3402589
+      slug: project-hype
+      title: "Project Hype"
+      description: "Discuss all Hype Sequel\\Remake or Hype Based game ideas here."
+    - id: 2968923
+      slug: polls-and-surveys
+      title: "Polls and Surveys"
+      description: ""
+    - id: 14438860
+      slug: other-good-games
+      title: "Other Good Games"
+      description: "Special section for discussing other good games than Hype - The Time Quest."

@@ -1,0 +1,44 @@
+---
+layout: page
+---
+{% comment %}
+  One topic of the forum archive. The posts come from the front matter of the
+  topic file in _forum. Post bodies were sanitized when the archive was created.
+{% endcomment %}
+{% for group in site.data.forum %}
+  {% for c in group.categories %}
+    {% if c.slug == page.category %}{% assign category = c %}{% endif %}
+  {% endfor %}
+{% endfor %}
+
+<p class="forum-breadcrumb">
+  <a href="{{ '/forum/' | relative_url }}">The Inn</a> ›
+  <a href="{{ '/forum/' | append: category.slug | append: '/' | relative_url }}">{{ category.title }}</a>
+</p>
+
+<ol class="forum-posts">
+  {% for post in page.posts %}
+  {% assign member = site.members | where: "member_id", post.author_id | first %}
+  <li class="forum-post" id="post-{{ post.id }}">
+    {% include forum-avatar.html member=member name=post.author %}
+    <div class="forum-post-main">
+      <p class="forum-post-meta">
+        <span class="forum-post-author">
+          {% if member %}<a href="{{ member.url | relative_url }}">{{ post.author | escape }}</a>{% else %}{{ post.author | escape }}{% endif %}
+        </span>
+        {% if post.rank != "" %}<span class="forum-post-rank">{{ post.rank | escape }}</span>{% endif %}
+        {% if member.posts %}<span class="forum-post-rank">Posts: {{ member.posts }}</span>{% endif %}
+        <time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M' }}">{{ post.date | date: "%B %-d, %Y at %-I:%M %p" }}</time>
+      </p>
+      <div class="forum-post-body">
+        {{ post.body }}
+      </div>
+      {% if post.signature and member.signature != "" %}
+      <div class="forum-signature">
+        {{ member.signature }}
+      </div>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>

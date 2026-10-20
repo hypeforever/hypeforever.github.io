@@ -1,0 +1,93 @@
+---
+layout: page
+---
+{% comment %}
+  Profile of a forum member. Only members with at least one post get a file in
+  _members; their posts are collected from all topics in _forum.
+  `posts` is the post count webs.com showed, it includes posts that are not
+  in the archive (e.g. deleted ones).
+{% endcomment %}
+{% assign count = 0 %}
+{% for topic in site.forum %}
+  {% for post in topic.posts %}
+    {% if post.author_id == page.member_id %}{% assign count = count | plus: 1 %}{% endif %}
+  {% endfor %}
+{% endfor %}
+
+<p class="forum-breadcrumb">
+  <a href="{{ '/forum/' | relative_url }}">The Inn</a> › Member
+</p>
+
+<div class="forum-profile">
+  {% include forum-avatar.html member=page name=page.title %}
+  <div>
+    <p class="forum-post-author">{{ page.title | escape }}</p>
+    <p>
+      {% if page.rank != "" %}{{ page.rank | escape }}<br>{% endif %}
+      {% if page.joined %}Joined <time datetime="{{ page.joined | date: '%Y-%m-%d' }}">{{ page.joined | date: "%B %-d, %Y" }}</time><br>{% endif %}
+      {% if page.posts %}Posts: {{ page.posts }}{% if page.posts != count %} ({{ count }} in this archive){% endif %}{% else %}Posts in this archive: {{ count }}{% endif %}
+    </p>
+  </div>
+</div>
+
+{% if page.general_info.size > 0 %}
+<h3>General Info</h3>
+<p>{% for line in page.general_info %}{{ line | escape }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</p>
+{% endif %}
+
+{% if page.signature != "" %}
+<h3>Signature</h3>
+<div class="forum-signature">
+  {{ page.signature }}
+</div>
+{% endif %}
+
+{% if page.about != "" %}
+<h2>About Me</h2>
+
+{{ page.about }}
+{% endif %}
+
+<h2>Posts</h2>
+
+<ul class="forum-list">
+  {% for topic in site.forum %}
+    {% for post in topic.posts %}
+      {% if post.author_id == page.member_id %}
+      <li>
+        <a href="{{ topic.url | relative_url }}#post-{{ post.id }}">{{ topic.title | escape }}</a>
+        <span class="forum-list-meta">
+          <time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </span>
+      </li>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>
+
+{% if page.comments.size > 0 %}
+<h2>Comments</h2>
+
+{% if page.comments.size < page.comments_total %}
+<p>{{ page.comments.size }} of {{ page.comments_total }} comments were preserved by the Internet Archive.</p>
+{% endif %}
+
+<ol class="forum-posts">
+  {% for comment in page.comments %}
+  {% assign author = site.members | where: "member_id", comment.author_id | first %}
+  <li class="forum-post forum-comment" id="comment-{{ comment.id }}">
+    <div class="forum-post-main">
+      <p class="forum-post-meta">
+        <span class="forum-post-author">
+          {% if author %}<a href="{{ author.url | relative_url }}">{{ comment.author | escape }}</a>{% else %}{{ comment.author | escape }}{% endif %}
+        </span>
+        <time datetime="{{ comment.date | date: '%Y-%m-%dT%H:%M' }}">{{ comment.date | date: "%B %-d, %Y at %-I:%M %p" }}</time>
+      </p>
+      <div class="forum-post-body">
+        {{ comment.body }}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endif %}

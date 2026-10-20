@@ -1,0 +1,85 @@
+---
+title: "How does the ISO image work?"
+topic_id: 9286518
+category: technical-stuff
+sticky: false
+started_by: "Grizzly Bear"
+last_post: "2013-08-26 16:02"
+posts:
+  - id: 54390503
+    author: "Grizzly Bear"
+    author_id: 115237194
+    rank: "Member"
+    date: "2013-08-23 23:10"
+    signature: false
+    body: |-
+      <p>I downloaded the iso image file from the downloads, because when I put the disk in my computer, my laptop gets REALLY hot. However, I don't know how to use the file, it downloaded as a .nrg file but I don't know where to put the file or how to convert/use it. Can one of you guys help me out here?</p>
+  - id: 54398844
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-08-24 11:57"
+    signature: true
+    body: |-
+      <p>You need this</p>
+      <p><a href="http://www.daemon-tools.cc/por/products/dtLite" rel="nofollow noopener">http://www.daemon-tools.cc/por/products/dtLite</a></p>
+      <p>Once you download + install, you must add a virtual drive, then open the .nrg file in it.</p>
+      <p>It's pretty easy. If you need further help, however, don't hesitate to ask.</p>
+  - id: 54406065
+    author: "Grizzly Bear"
+    author_id: 115237194
+    rank: "Member"
+    date: "2013-08-24 18:55"
+    signature: true
+    body: |-
+      <p>Thanks Moonlighter, thanks to you, I figured out how it works, but I'm not sure if I can get it to work on my Mac.</p>
+      <p>Well, I've been doing a little research. I've been trying to get it to work on my mac, but it's not doing so well. I've learned that if you change it to a .dmg or .iso file, it will convert, but DiskImageMounter won't recognize it. It says online the reason for that would be that it is originally a Windows file. I would have to open it as an ISO file, but I don't know how to change it to be recongnizeable to Mac. I bet it's possible, but I thought I'd throw what I learned through the process on the Forum.</p>
+      <p>For now, I'll have to either use it on a PC, or let my laptop get a bit hot while I'm playing. If anybody has any ideas, let me know.</p>
+  - id: 54410515
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-08-24 22:27"
+    signature: true
+    body: |-
+      <p>That should be easy tho. Isn't there some Nero for mac? (again, I know nothing about macs, have never seen\touched one)</p>
+      <p>All you need is to create an image file from the original disc and play it on some random image mounter. I believe there's a version of Daemon Tools for mac as well.</p>
+  - id: 54413566
+    author: "Grizzly Bear"
+    author_id: 115237194
+    rank: "Member"
+    date: "2013-08-25 00:31"
+    signature: true
+    body: |-
+      <p>Ah ok, I found it:</p>
+      <p><a href="https://support.apple.com/kb/PH5841?viewlocale=en_US&amp;locale=en_US" rel="nofollow noopener">http://support.apple.com/kb/PH5841?viewlocale=en_US&amp;locale=en_US</a></p>
+      <p>It's under "Create a disk image from a disk or folder"</p>
+      <p>I've learned quite a bit about computer software by trying to get Hype to work on Mac…</p>
+  - id: 54419352
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-08-25 09:24"
+    signature: true
+    body: |-
+      <p>Haha Hype has teached us all different lessons in its own particular way : )<br>I'm assuming you got Hype to work 100% now? If yes, please tell me how you did it so I can post an official solution in the "Bugs &amp; Problems" section. I'll credit it to you, of course.</p>
+  - id: 54437782
+    author: "Grizzly Bear"
+    author_id: 115237194
+    rank: "Member"
+    date: "2013-08-25 23:29"
+    signature: true
+    body: |-
+      <p>Sure, here are the steps</p>
+      <ol><li>Download Wineskin from <a href="http://wineskin.urgesoftware.com/tiki-index.php" rel="nofollow noopener">http://wineskin.urgesoftware.com/tiki-index.php </a>;(by the way, this is a free download, and there are no surveys or anything of that sort. this is completely legitement and legal, but not very well known about)</li><li>After following installation instructions, open wineskin and click "Create New Blank Wrapper" it will then prompt you to type in a Title of the wrapper, this will be the title of the application.</li><li>After Wineskin finishes creating a wrapper, click "View Wrapper in Finder." Right click the file you just created and click "Show Package Contents" and open Wineskin from there.</li><li>When Wineskin opens, click "Install Software" and then choose either "Copy a Folder Inside" or "Move a Folder Inside." Choose the installation folder that is available for download on this website.</li><li>After installation, go back to the Wineskin menu and choose "Advanced" and be sure that "/UbiSoft/Hype - The Time Quest/MaiD3Dvr_bleu.exe" is designated as the "Windows EXE.</li><li>In the "Advanced" menu, click "Tools" and then choose "Winetricks." Open "dlls" and choose the following: "d3dx9_36"; "dinput"; "mfc40"; "mfc42" click "Run" and these essentially drivers will download. (This may take a few minutes)</li><li>Finally, close Winetricks and click "Test Run." If it works, it is successfully installed on your Mac/Linux.</li></ol>
+      As for the ISO image, I am only 90% sure I know how to do it. I'm actually locked out of Admin permission on my computer (I have to fix that) so I can not complete the conversion. Basically, what I think you do is take the downloadable "iso" which is actually an .nrg and open "Disk Utility." Then I think you click "File" &gt; "New" &gt; "Disk Image from Folder" and then choose the actual disk of Hype the Time Quest and change the "Image Format to "DVD/CD Master" and click save. Whatever the file Disk Image produces will probably have to be shared between Macs. I haven't gotten that far, so I don't know the details beyond that.
+  - id: 54450749
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-08-26 16:02"
+    signature: true
+    body: |-
+      <p>Look at you doing a well done service! <br>I'm proud. I'll post it on the official page : )</p>
+      <p>Thank you so much, sir.</p>
+---

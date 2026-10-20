@@ -479,3 +479,163 @@
     margin-bottom: 8px;
     font-size: $small-font-size;
 }
+
+/**
+ * Forum archive
+ */
+.forum-breadcrumb {
+    font-size: $small-font-size;
+}
+
+.forum-list {
+    list-style: none;
+    margin: 0;
+
+    > li {
+        padding: 10px 0;
+        border-bottom: 1px solid $border-color;
+        overflow-wrap: break-word;
+    }
+
+    > li:first-child {
+        padding-top: 0;
+    }
+
+    > li:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.forum-list-meta {
+    display: block;
+    font-size: $small-font-size;
+}
+
+.forum-sticky {
+    font-weight: bold;
+}
+
+.forum-posts {
+    list-style: none;
+    margin: 0;
+}
+
+.forum-post {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid $border-color;
+    overflow-wrap: break-word;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.forum-post-meta {
+    margin-bottom: 8px;
+
+    time {
+        display: block;
+        font-size: $small-font-size;
+    }
+}
+
+.forum-post-author {
+    font-weight: bold;
+    color: $text-color;
+}
+
+.forum-post-rank {
+    font-size: $small-font-size;
+    margin-left: 4px;
+
+    &::before {
+        content: "· ";
+    }
+}
+
+.forum-post-body {
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    blockquote {
+        font-size: $small-font-size;
+    }
+}
+
+.forum-quote-meta {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.forum-image-missing {
+    font-style: italic;
+}
+
+.forum-post-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.forum-avatar,
+.page .box-content img.forum-avatar { // not centered like other page images
+    flex: none;
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+
+    @include media-query($on-palm) {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.forum-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $border-color-dark;
+    color: $box-color;
+    font-size: 32px;
+    font-weight: bold;
+
+    @include media-query($on-palm) {
+        font-size: 22px;
+    }
+}
+
+.forum-signature {
+    margin-top: 12px;
+    padding-top: 8px;
+    border-top: 1px dashed $border-color;
+    font-size: $small-font-size;
+
+    p {
+        margin-bottom: 4px;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.forum-profile {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+
+    p {
+        margin-bottom: 0;
+    }
+}

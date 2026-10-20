@@ -1,0 +1,640 @@
+---
+title: "Hype Under Windows 7 (Updated)"
+topic_id: 8811007
+category: technical-stuff
+sticky: true
+started_by: "Moonlighter"
+last_post: "2020-05-02 08:54"
+posts:
+  - id: 50736576
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-03-28 10:35"
+    signature: true
+    body: |-
+      <p>Hello!<br>This topic contains info on how to play Hype The Time Quest under Windows 7.</p>
+      <p>First of all, you have to discover what is your problem. There are 3 main errors:</p>
+      <p><b>1)</b>Can't install the game\run the installer properly.</p>
+      <p><b>2)</b>Can install, but can't play the game (crashes during\before\after the movies at the start of the game)</p>
+      <p><b>3)</b>Can install, can play,but there are graphical glitches (black artifacts blocking your vision)</p>
+      <p>...or all of them, if you are lucky as me ;)</p>
+      <p><b>1) </b><b>Can't install the game\run the installer properly.</b></p>
+      <p><b>Reason</b>: This happens mostly in 64-bit systems. It's related to the way the installer was built (16 bit) and, altough it runs fine in 32-bit Systems, it doesn't in 64 because it no longer supports this kind of program.</p>
+      <p><b>Solution (or fix): </b>If you have this problem, you won't be able to get the installer to install your game properly at all, and will have to do a manual install. To do this, you must either copy the already installed folders from another install \computer or download them in the Downloads Section of this website. (<a href="/downloads/">Here</a>).</p>
+      <p><b>2)Can install, but can't play the game (crashes during\before\after the movies at the start of the game)</b></p>
+      <p><b>Reason:</b>The movies that play in the beginning can lead the game to crash, for various reasons (among them, the plugin required to play them is too old\incompatible with your system\hardware or cannot be found)</p>
+      <p><b>Solution\Fix: </b>Modify the file in C:\Windows\Ubisoft\ubi.ini</p>
+      <p>Find the line</p>
+      <p><i>playvideo=1</i></p>
+      <p>And change it to</p>
+      <p><i>playvideo=0</i></p>
+      <p>It should be located under [Hype - The Time Quest]</p>
+      <p>Now you can play normally.</p>
+      <p><b>3)Can install, can play,but there are graphical glitches (black artifacts blocking your vision)</b></p>
+      <p>In this case, it's a problem with your graphic hardware: It's too modern and it can't process info the way the older graphic cards did. In this case, you have to go for the fix, that is playing using MAIDFXVR_BLEU instead of MAID3DVR_BLEU.EXE . To do this, you'll need to download a program called <a href="http://www.zeus-software.com/downloads/nglide" rel="nofollow noopener">Nglide</a>.</p>
+      <p>After you download and install it, find the file "glide3x.dll" in your "C:\Windows\System32" folder and copy it to Hype's installation directory</p>
+      <p>(Default is "C:\Ubisoft\Hype - The Time Quest\")</p>
+      <p>The artifacts should no longer appear.</p>
+  - id: 50736865
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-03-28 10:51"
+    signature: true
+    body: |-
+      <p><b>Extra Problems\Solutions\Fixes</b></p>
+      <p>This problems are not as common as the ones listed above, and may have more than one reason or solution, so you'll have to test out and see what works for you.</p>
+      <p><b>"I've installed nGlide, but the game won't even start. The screen doesn't even go dark. Nothing happens."</b></p>
+      <p><b>Solution A:</b> Try changing the compatibility options. Try them all (including with "Run as Admin" on and off) and see if any of them works...if not</p>
+      <p><b>Solution B:</b> Uncheck all the compatibility settings. Download this patch<a href="/assets/downloads/hype_patch.zip"> <a href="/assets/downloads/hype_patch.zip">http://hypeforever.webs.com/otherfiles/hype_patch.zip</a></a></p>
+      <p>Extract all the contents in the file to your Hype - The Time Quest installation folder</p>
+      <p>(Default is C:\Ubisoft\Hype - The Time Quest )</p>
+      <p>Run the file "PatchInstall.bat" from there (Just double-click it).</p>
+      <p>You should be able to play Hype with no problems.</p>
+      <p>If it doesn't work, try to change the comp. settings once again.</p>
+      <p><b>"I can't save the game"</b></p>
+      <p>This seems to be related to Windows 7 as well.</p>
+      <p>If you have problems saving your games or loading then, simply CREATE a folder called Savegame inside the gamedata folder where you installed the game...inside savegame, create 11 folders</p>
+      <p>HYPE</p>
+      <p>Savegame0</p>
+      <p>Savegame1</p>
+      <p>Savegame2</p>
+      <p>...until...</p>
+      <p>Savegame9</p>
+      <p>And try saving now. If the problem still persists, download one of the Save Games packs on the downloads section and try installing them. Then play normally and save your games over them.</p>
+  - id: 51713839
+    author: "Bananapeel"
+    author_id: 110270769
+    rank: "Member"
+    date: "2013-05-07 12:53"
+    signature: false
+    body: |-
+      <p>Hey there! I am trying to install hype on my alienware, it runs windows 7 Home Premium and graphics card is NVIDIA Geforce GT 555M ... I downloaded the install folders from this website because I don't have a computer to install the game disc on. I joined the 3 folders using HJSPLIT, and extracted them to the Hype - The Time Quest Installation folder. I set the compatibility to windows 2000 and got MAID3DVR_BLEU.exe to launch. I clicked new game, it loaded quickly, it automatically skipped the intro cut scene (because the install folders provided on this website have already modified the ub.ini file?) and it had black graphical gltiches. about 30 seconds into Gogood talking the game crashed. I tried it in other compatibility settings such as windows 98/me and windows 95 and they all had identical results. <br><br>I then downloaded and installed nglide. I'm not entirely sure how nglide works but I found the glide3x.dll file in C:\Windows\sysWOW64 and copied it to the Hype - The Time Quest install folder, but there was already a file in the Hype - The Time Quest install folder named glide3x.dll. Am I supposed to replace this file? I left both in the install folder.<br><br>I tried to launch the MAIDFXVR_BLEU.exe and it would only show me the 3DFX video then crash. I installed the patch ( I guess? when I double clicked it it opened the console for half a second and closed) and it doesn't change a thing :( I have messed with the compatibility options as this page says, but to no avail :(. When I use windows 95 or windows 98/Me, it will slow down my computer and it takes close to 5 minutes just to close it. <br><br>I'm not sure what to do! Is my graphics card simply too modern to play 16 bit?<br><br>Thanks in advance :)</p>
+  - id: 51722935
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-05-07 18:48"
+    signature: true
+    body: |-
+      <p>1) Yes you're supposed to replace the file</p>
+      <p>2)I believe that the installed folders are already patched, however you have to install both provided folders in C:\ . One *replaces* your windows folder (it actually doesn't, it just adds the patched ubisoft install folder)</p>
+      <p>Ok so here's a few more things you can try</p>
+      <p>CHECK if the Ubisoft folder is in C:\Windows\<br><br>Check the file C:\Windows\Ubisoft\ubi.ini and look for</p>
+      <p>PlayVideo = 0 line under [Hype - The Time Quest]</p>
+      <p>If it's not there, just add it. If it's set to 1, set it to 0</p>
+      <p>The 3DFX logo used to make my Hype app crash on my older computer. Just open nGlide's Configurator and turn off the Splash screen.</p>
+      <p>See if any of these work for you, SPECIALLY the glide3x.dll thing. Also, I believe you can get it from another location as well (System or System32)...if it fails, try the ones in these folders, if you have glide3x in them.</p>
+  - id: 51747807
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-05-08 22:23"
+    signature: true
+    body: |-
+      <p>And hey, please report back if it does work, so that I can post it up as an official solution</p>
+  - id: 51899049
+    author: "Needafire"
+    author_id: 110653913
+    rank: "Member"
+    date: "2013-05-16 14:11"
+    signature: false
+    body: |-
+      <p>Hello there,</p>
+      <p>Last time I played Hype was years ago on my grandpa's computer. Now I tried to install it on my laptop using the tips from this site (copy installation folder from 32-bit computer, install nGlide, extract glide3x.dll to installation folder, install and run the patch). When I run the game (using MaiD3Dvr_bleu or the MaiDFXvr_bleu) I see the logo of Ubisoft with a loading bar under it. When it finished loading the main menu appears. When I start a new game everything looks normal until Gogoud appears. Then black squares cover more than half of the screen. As the scene continues, the squares appear and disappear. When Gogoud finished talking the squares cover almost my entire screen, the only place where you can see something is the upper sixth part of the screen. I tried loading a saved game (from my grandpa's computer), but the screen is also almost entirely black (upper sixth and some squares here and there are not black, but that's it). Sound is fine.</p>
+      <p>I'm running Windows 7 64 bit, AMD Dual-Core C60 up to 1.33 GHz, 2 GB RAM, GPU AMD Radeon HD 6290 Graphics (400 MHz, 878 MB).</p>
+      <p>When I try to find the nGlide configurator my computer doesn't come up with anything (I believe the version is 1.01). When I look in C:\Windows I can't find the Ubisoft folder.</p>
+      <p>Can anyone help me?</p>
+  - id: 51921823
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-05-17 17:21"
+    signature: true
+    body: |-
+      <p>1) Black squares mean you're NOT playing MaiDFXvr_bleu.exe. This bug isn't present in this .exe</p>
+      <p>2)IF you have installed nGlide, search for "Configurator" only. It's the name of the software in the Start menu.</p>
+      <p>3)The "C:\Windows\Ubisoft" folder should have been copied from the original machine as well. However, if your game runs without it, try at least creating C:\Windows\Ubisoft and paste this file inside of it</p>
+      <p><a href="https://www.mediafire.com/view/?v8vb34cei5v2a5c" rel="nofollow noopener">http://www.mediafire.com/view/?v8vb34cei5v2a5c</a></p>
+      <p>Then run the game using the MaiDFXvr file. If it still doesn't work, just come back.</p>
+  - id: 51934463
+    author: "Needafire"
+    author_id: 110653913
+    rank: "Member"
+    date: "2013-05-18 08:46"
+    signature: false
+    body: |-
+      I'll try and see if that works. Thank you!
+  - id: 51936498
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-05-18 11:14"
+    signature: true
+    body: |-
+      <p>You're mostly welcome : )</p>
+  - id: 51957924
+    author: "Needafire"
+    author_id: 110653913
+    rank: "Member"
+    date: "2013-05-19 09:42"
+    signature: false
+    body: |-
+      <p>I guess I probably clicked wrong when trying to launch with MaiDFXvr_bleu.exe, so I tried again making sure I clicked right. An error window popped up saying something was wrong with Glide 3.01 (can't remember what exactly, if someone wants to know I can look it up). I googled Glide 3.01 and decided the problem was with the glide3x.dll file. When checking if the file was present in C:\Windows\SysWOW64 I found the file, but it was 1280 KB while the one in C:\Windows\System32 was 407 KB. I replaced the driver I had copied to the installation folder (the 407 KB one) with the 1280 KB one and tried launching the game. It worked perfectly! :D (Well, no Playmobil interactive intro and no Gogoud giving the introduction to the beginning of the story, but I'm glad it works.)</p>
+      <p>Moonlighter, many thanks for helping me out (and for creating this site in the first place). The only other places where you could discuss and ask around about this game were probably abandoned years ago.</p>
+      <p>One more little question: could somebody tell me how to watch the cutscenes at the beginning and the end of the game? I can watch them on YouTube, of course, but I'd find it interesting to find out how you can find and play them. Thanks in advance!</p>
+  - id: 51983246
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-05-20 11:44"
+    signature: true
+    body: |-
+      <p>Oooh what do you mean?<br>You can't really watch the video ingame...at least not the intro one. I believe the ending sequence still plays noramlly despite of the Playvideo = 0 thingy.</p>
+      <p>In your pc, they are located in</p>
+      <p>C:\Ubisoft\Hype - The Time Quest\Gamedata\Videos</p>
+      <p>You can play them using quicktime. You'll most likely need to install this plugin</p>
+      <p><a href="http://www.moviecodec.com/download-video-codecs/indeo-video-5-plugin-for-quicktime-for-windows-360/" rel="nofollow noopener">http://www.moviecodec.com/download-video-codecs/indeo-video-5-plugin-for-quicktime-for-windows-360/</a></p>
+      <p>to play them</p>
+      <p>Hope I have helped : )<br>And it's great that you are now able to play this amaaazing game : )</p>
+  - id: 52369493
+    author: "Laamanen7"
+    author_id: 111672736
+    rank: "Member"
+    date: "2013-06-05 09:40"
+    signature: true
+    body: |-
+      <p>Hey, so I have a problem: My computer has win7 64bit, so I cant run the installer of the iso.file. I downloaded the "installed files", joined them to make a rar.-file, but when I try to extract them to C/, there are some files that give errors, so I cant extract them. <br>And even if I somehow managed to extract them, how would I launch the game? <br>If anyone has some solution or instructions for me, that would be great, because I would love to play this game again so much!</p>
+  - id: 52377930
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-06-05 17:22"
+    signature: true
+    body: |-
+      <p>Ok so here's the thing:<br><br>1)You'll extract the folders present in the rar file to C:\ .</p>
+      <p>2)You'll either burn the iso file to a disc, use your original disc or use some virtual drive software (eg. Daemon Tools) to emulate the disc image</p>
+      <p>3) You'll open C:\Ubisoft\Hype - The Time Quest\ and run MAIDFX_BLEU.exe</p>
+      <p>Try extracting the folder to other location. If it suceeds, it's probably because of your UAC settings. In this case, you won't be able to replace the Windows folder directly, so you'll need to copy Hype - The Time Quest to C:\Ubisoft\ and the "Ubisoft" folder in (zipfile\windows\ubisoft) to C:\Windows.</p>
+      <p>If it still doesn't work, lemme know.</p>
+  - id: 52392000
+    author: "Laamanen7"
+    author_id: 111672736
+    rank: "Member"
+    date: "2013-06-06 08:16"
+    signature: true
+    body: |-
+      <p>My problem is not the mounting of the iso.file. When the setup did not work I tried to download the iso from different source (this site was third), and when I couldnt get it work I knew the problem was that my system is 64bit. <br>Unfortunately I found out that the setup did not open even with 32bit system. After I had given up I found this site, followed the insturctions, downloaded the "installed files" (3 files), joined them with HJSPLIT, and tried to extract them to C:, which of course failed. And the problem is that when I try to extract the rar. file (to any folder), at the end of extraction winrar displays these to error messages: <br>"C:/users/........./HYPE_FOLDERS.rar: CRC failed in HYPE/Hype - The Time Quest/GAmedata/World/Sound/Bnk_155-bnm. The file is corrupt"</p>
+      <p>and</p>
+      <p>"C:/......../Unexpected end of archive"<br><br>Now I´ve tried to download these 3 files again, and I have mounted 3 different "torrent files" of hype, but still without success. So since the problem is not with operating system, or the iso file, it must be with the "installed files", which I downloaded here. According to you, I could get time quest to work, IF I used the installed files, but the problem I have now, is that I cannot extract these files to C: , or any other folder.<br><br>Sorry, this message became way too long : D</p>
+  - id: 52401814
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-06-06 17:45"
+    signature: true
+    body: |-
+      <p>Lmao no problem. You better give me a long, but accurate descrpition of the problem than a short note that doesn't really say anything. But well, plenty of people were already able to install Hype from the files I provided. I didn't re-upload them or anything, so I know the files I uploaded are perfect. Now, there are two possibilities:<br><br>a) Your downloads are getting corrupt (try disabling download accelerators\managers)<br>b)You are joining the wrong files...</p>
+      <p>Let's say...if any of your downloads failed, but are still on the folder, and you re-downloaded them, there's a possibility the correct file is renamed to "Hype_folders.001(1).rar". Then, HJsplit may join the unfinished file and that's why you're getting an error message.</p>
+      <p>In this case, first of all make sure none of your files are unfinished or renamed @ the end. Then, create a clean folder, move the 3 source files onto it and join them, then try extracting them. If it still fails, I'll have to ask you to download the files again, putting all of them in a clean folder.</p>
+      <p>If you want personal assitance, you may contact me via skype</p>
+      <p>it's rafaeltsd .</p>
+  - id: 52405905
+    author: "Laamanen7"
+    author_id: 111672736
+    rank: "Member"
+    date: "2013-06-06 20:36"
+    signature: true
+    body: |-
+      <p>So the problem was solved by downloading the installed files into a clean folder, so now I can actually run the game.<br>It still crashes after the intro videos (during the loading with ubisoft logo). I tried to change the "show video-value to 0, but it did not change anything. But I hope the game actually starts when I try it with a 32bit windows. So thank you so much! The level of nostalgic pleasure is going to be unbelievable when I get this thing to work!!</p>
+  - id: 52441335
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-06-08 11:12"
+    signature: true
+    body: |-
+      <p>Good! : )<br>And that's actually easy to solve!<br>Have you installed nGlide? You'll only be able to play Hype through the</p>
+      <p>MAILDFX_BLEU.exe version, which requires nGlide. After that, go to</p>
+      <p>C:\Windows\Ubisoft\ubi.ini and change</p>
+      <p>[Hype - The Time QUest]</p>
+      <p>Playvideo = 1</p>
+      <p>to</p>
+      <p>[Hype - The Time QUest]</p>
+      <p>Playvideo = 1</p>
+      <p>It HAS to work ; )</p>
+  - id: 53807911
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-30 19:34"
+    signature: false
+    body: |-
+      <p>I installed the game on a computer running windows XP, and have successfully moved it to my Windows 7 64 bit computer. I also downloaded nglide, and moved glide3x.dll into the Hype folder from SysWOW64. I read that it might work to move it from System32 instead, but when I downloaded and installed it, it did not install to there, only to SysWOW64. I am able to open the game using MaiDFXvr_bleu, but it just goes to a black screen, and doesn't respond. If I attempt to open MaiD3Dvr_bleu instead, the starting music plays, and then the Ubisoft screen with the loading bar shows, but the bar goes straight to halfway and then stops and doesn't move anymore. Also, if I go into C:Windows&gt;Ubisoft and open ubi.ini, the playvideo line isn't there either. Any idea what's wrong?</p>
+  - id: 53810757
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-07-30 21:30"
+    signature: true
+    body: |-
+      <p>Hello!<br>Check to see if you got the [Hype - The Time Quest] line. If Yes, just add playvideo = 0 under it.</p>
+      <p>Check if you can play now, with playvideo = 0. As for glide3x, copy it into Hype's directory, system 32 and SysWow64. If the glide version of Hype still doesn't work, come back.</p>
+  - id: 53811815
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-30 22:13"
+    signature: false
+    body: |-
+      <p>I was able to copy the glide3x file into system32, but there is no Hype - The Time Quest line in ubi.ini either.</p>
+  - id: 53813290
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-07-30 23:12"
+    signature: true
+    body: |-
+      <p>This is probably the issue. Do you have other ubisoft games?</p>
+      <p>-If not</p>
+      <p><a href="https://www.mediafire.com/download/v8vb34cei5v2a5c/ubi.ini" rel="nofollow noopener">http://www.mediafire.com/download/v8vb34cei5v2a5c/ubi.ini</a></p>
+      <p>Download this and replace it in your folder</p>
+      <p>-if yes</p>
+      <p>download the file, open it, then</p>
+      <p>Copy the entire block under (and including) [Hype - The Time Quest]</p>
+  - id: 53813811
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-30 23:38"
+    signature: false
+    body: |-
+      <p>Only the block directly under it, or the whole thing under that line?</p>
+  - id: 53813860
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-30 23:40"
+    signature: false
+    body: |-
+      <p>Also, I am not able to save the ubi.ini file, it says that it already exists, and when I try to replace it, it says access denied.</p>
+  - id: 53814476
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-07-31 00:12"
+    signature: true
+    body: |-
+      <p>I don't remember now. If there are any other games (Rayman etc) don't copy them, otherwise the block directly down Hype - The Time Quest.</p>
+      <p>But you have to unlock the file. Check proprierties and try uncheckin "Read Only". See if that works</p>
+  - id: 53814668
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-31 00:23"
+    signature: false
+    body: |-
+      <p>I have figured out that the reason I could not save ubi.ini was because the folder was read only, but when I try to change it, the box is checked again when I open properties again.</p>
+  - id: 53814778
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-07-31 00:30"
+    signature: true
+    body: |-
+      <p>What the hell?</p>
+      <p>the Ubisoft folder is read only? Do you have other Ubisoft Games?</p>
+  - id: 53814832
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-31 00:33"
+    signature: false
+    body: |-
+      <p>Yes, I can't get the read only setting to stay off. I tried changing the security permissions to allow everything full control, and that hasn't helped.</p>
+  - id: 53815245
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-31 00:56"
+    signature: false
+    body: |-
+      <p>I have the other playmobil games on my computer, but I could uninstall them and reinstall them later if necessary.</p>
+  - id: 53815357
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-31 01:02"
+    signature: false
+    body: |-
+      <p>Actually, only one of the other games installed sucessfully, the other seems to have the same problem as hype, but I can try to fix that another time.</p>
+  - id: 53815548
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-31 01:12"
+    signature: false
+    body: |-
+      <p>Also, the ubisoft folder was read-only, but ubi.ini actually was not set to that, so basically it's not that I can't save over ubi.ini, it's actually not letting me save anything in that folder at all</p>
+  - id: 53815563
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-31 01:13"
+    signature: false
+    body: |-
+      <p>Hang on, actually, I just opened it with wordpad instead of notepad, and saved it instead of trying to replace it, it seems like that actually just worked.</p>
+  - id: 53815667
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-31 01:20"
+    signature: false
+    body: |-
+      <p>OK, it finally just started working with the MaiD3Dvr_bleu application, and got to the menu screen. I'm not sure if the game actually works yet, but at least I got this far, and I have to go for now.</p>
+      <p>Thank you for all of your help, I definitely couldn't have figured any of this out on my own.</p>
+  - id: 53816755
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-07-31 02:27"
+    signature: true
+    body: |-
+      <p>Ok but if you're under xp perhaps you can play with d3d...But it's still weird...tell me if you manage to get it runnin.</p>
+  - id: 53837728
+    author: "Orangefishboy"
+    author_id: 114215447
+    rank: "Member"
+    date: "2013-07-31 22:00"
+    signature: false
+    body: |-
+      <p>It does seem to be working now, haven't had any crashes yet.</p>
+  - id: 53851744
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2013-08-01 13:47"
+    signature: true
+    body: |-
+      <p>Good Good! But I really think we went off topic here, since this is mainly for Windows 7. I'll have to move some things here.</p>
+  - id: 60706892
+    author: "Rejnholten"
+    author_id: 124610219
+    rank: "Member"
+    date: "2014-02-20 09:37"
+    signature: false
+    body: |-
+      <p>Hi.</p>
+      <p>I have been trying to install Hype on my computer so it functions in about 2 years now, and it STILL doesn't work properly :/ <br>I have installed it now so that is works on my computer without glitches or anything, but I still can't save! I have tried to create a SaveGame folder in GameData and the folders:<br>HYPE<br>SaveGame0<br>SaveGame1<br>...<br>SaveGame9<br>But nothing happens. Then I tried to install your saved games and put the Savegame folders in the main SaveGame folder, but then the game says "invalid Save Games" and cannot open them.<br>I have the compatability mode to Windows 95, is that part of the problem or? I have tried to look for a solution, but I haven't been able to find one. I hope someone can help me, because this is one of my favorit games!</p>
+  - id: 60731154
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2014-02-21 10:35"
+    signature: true
+    body: |-
+      <p>It looks like you did something wrong. Also, try setting the compat. to windows 2000,and enable "Run as Administrator" or the equivalent at the same compatibility tab, in proprierties for MAIDFXFVR_BLEU.exe</p>
+  - id: 60786999
+    author: "Chiszczow66"
+    author_id: 124695398
+    rank: "Member"
+    date: "2014-02-23 17:14"
+    signature: false
+    body: |-
+      <p>Hi, i have a question with running the game properly. I've already checked the thing with glide3x.dll, as well as ubi.ini : PlayerVideo -0 (or something simillar), and the intros start perfectly. But the game itself crashes after the movie with Hype turned into stone. Could anyone suggest what have i done wrong? I have Windows8 and i'm afraid, that it may bann me from playing this litlle masterpiece forever. Thank you in advance :)</p>
+  - id: 60787023
+    author: "Chiszczow66"
+    author_id: 124695398
+    rank: "Member"
+    date: "2014-02-23 17:15"
+    signature: false
+    body: |-
+      <p>if there are any mistakes, sorry for it, english is not my language</p>
+  - id: 60787740
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2014-02-23 17:46"
+    signature: true
+    body: |-
+      <p>"The intros start perfectly" they shouldn't. If you set playvideo = 0, they shouldn't play.</p>
+  - id: 60788130
+    author: "Chiszczow66"
+    author_id: 124695398
+    rank: "Member"
+    date: "2014-02-23 18:04"
+    signature: false
+    body: |-
+      <p>hm, yeah - now it seems logical. i did it wrong last time, but when i try to do it right now, there's a message, which says that i don't have an authorization. any idea how to pass it?i'm not a computer expert..</p>
+  - id: 60788365
+    author: "Chiszczow66"
+    author_id: 124695398
+    rank: "Member"
+    date: "2014-02-23 18:16"
+    signature: false
+    body: |-
+      <p>wait, i've found it! it works! :D thanks for this website</p>
+  - id: 61070281
+    author: "WilloftheNinja"
+    author_id: 124989892
+    rank: "Member"
+    date: "2014-03-07 19:05"
+    signature: false
+    body: |-
+      <p>I found this website (downloaded the soundtrack and love it) and I want to play the game again. I downlaoded all of the files (hype.rar 001-003) combined them, and then put ubisoft and hype the time quest in the /C drive. It says not responding. playvideo is =0. Which file should I open to start the game? Do I need the disk to play with these files? Are there any other steps I must perform?</p>
+      <p>Thanks</p>
+      <p>P.S. the 3 cutscenes only play audio, and every program I put them into says they are broken.</p>
+  - id: 61087365
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2014-03-08 14:30"
+    signature: true
+    body: |-
+      <p>Yes you do need the disc. You can also playing emulating a disc image, that you can download here in the site, as long as you have an original copy of the game (legal issues).</p>
+  - id: 61088883
+    author: "HeroHype"
+    author_id: 121768707
+    rank: "Moderator"
+    date: "2014-03-08 15:42"
+    signature: true
+    body: |-
+      <p>Moonlighter please share my Dropbox link!</p>
+      <p>I´m going to make a german iso of the game :D</p>
+      <p>But it also should work with you cd... did it?</p>
+  - id: 61093850
+    author: "WilloftheNinja"
+    author_id: 124989892
+    rank: "Member"
+    date: "2014-03-08 18:57"
+    signature: false
+    body: |-
+      <blockquote><p class="forum-quote-meta"><a href="/forum/members/50609089-moonlighter/">Moonlighter</a> at March 8, 2014 at 2:30 PM</p>
+      <p>Yes you do need the disc. You can also playing emulating a disc image, that you can download here in the site, as long as you have an original copy of the game (legal issues).</p>
+      </blockquote>
+      <p>I'm not sure what to do next. I believe I put both Hype the time quest and Ubisoft folders in my C: drive, correct? Then what program do I run to start the game once both the programs and disc are in my computer?</p>
+  - id: 61108717
+    author: "HeroHype"
+    author_id: 121768707
+    rank: "Moderator"
+    date: "2014-03-09 13:10"
+    signature: true
+    body: |-
+      <p>Yes i know that we need a disc to play... but i dont know if you need the german disc for the german game perhaps it'll also work with other language Version ...</p>
+      <p>I made a Setup for easy installation. I gonna make a Tutorial on Youtube and post a Link of the german game iso soon :D</p>
+      <p>until then try this:</p>
+      <p><a href="https://www.dropbox.com/s/w2cinm2fx1g3q3v/HypeTheTimeQuest.zip" rel="nofollow noopener">https://www.dropbox.com/s/w2cinm2fx1g3q3v/HypeTheTimeQuest.zip</a></p>
+  - id: 61160015
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2014-03-12 00:15"
+    signature: true
+    body: |-
+      <blockquote><p class="forum-quote-meta"><a href="/forum/members/124989892-willoftheninja/">WilloftheNinja</a> at March 8, 2014 at 6:57 PM</p>
+      <blockquote><p class="forum-quote-meta"><a href="/forum/members/50609089-moonlighter/">Moonlighter</a> at March 8, 2014 at 2:30 PM</p>
+      <p>Yes you do need the disc. You can also playing emulating a disc image, that you can download here in the site, as long as you have an original copy of the game (legal issues).</p>
+      </blockquote>
+      <p>I'm not sure what to do next. I believe I put both Hype the time quest and Ubisoft folders in my C: drive, correct? Then what program do I run to start the game once both the programs and disc are in my computer?</p>
+      </blockquote>
+      <p>Your hype folder should be in C:\Ubisoft\Hype - The Time Quest\</p>
+      <p>Your ubisoft folder (the one in HYPE_FOLDERS) should be in C:\Windows\Ubisoft</p>
+      <p>inside of it "Hype - The Time Quest" folder there should be an executable called <b>MAIDFXVR_BLEU.exe.</b> this is the one to run.</p>
+      <p>Obs: Keep in mind that you must also install the program called<b> nGlide</b>, from Zeus Software, and copy the file<b> glide3x.dll </b>from C:\Windows\System32 or C:\Windows\SysWoW64 after installing it.</p>
+  - id: 62389949
+    author: "WilloftheNinja"
+    author_id: 124989892
+    rank: "Member"
+    date: "2014-05-26 18:08"
+    signature: false
+    body: |-
+      <p>I am about to download the disc print via your website, but I have realized the videos are weird. Whenever I open a cutscene using quicktime, WMP, or any other program, it only plays the sound without video. Is it broken?</p>
+  - id: 62390252
+    author: "WilloftheNinja"
+    author_id: 124989892
+    rank: "Member"
+    date: "2014-05-26 18:24"
+    signature: false
+    body: |-
+      <p>Also what do you do once you download the disc image?</p>
+  - id: 62413462
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2014-05-28 01:42"
+    signature: true
+    body: |-
+      <p>Well the videos are weird because of the Quick Time <b>(Indeo5) </b>plugin\codec you must download in order to visualize them. I don't think this affects the ingame videos anyway, but you may download it from the web. It's just that this plugin is very old, and not included in newer pcs\os. As for disc image, you should download a virtual drive emulator (Like Daemon Tools) and Mount the image in a virtual drive. It will work similiarly to a disc in the drive. If you have the original disc, however, you don't need the image.</p>
+  - id: 63312213
+    author: "HypeDome"
+    author_id: 127557341
+    rank: "Member"
+    date: "2014-07-28 20:44"
+    signature: false
+    body: |-
+      <p>everything worked with the instaler and the german version.<br>Sometimes the game freezes but only when i tab or sth ...<br><br>BUT .. when I go to the first door i am not able to open it.. Hype uses the key but then there is this "empty" sound track... <br><br>Did he just upload a demo? I got the cd aswell.. but.. well.. :D <br><br>Help :D</p>
+  - id: 66339951
+    author: "lfxoise"
+    author_id: 131026625
+    rank: "Member"
+    date: "2015-06-07 05:07"
+    signature: false
+    body: |-
+      <p>I there! First of all, thank you for everithing, your accurate advices aloued me to play at this wonderfull game, this website is very awesome! But there is one question i would like to ask, i have intalled the game just as you did and it works perfectly but i really would like to play it in french :/ I have a french iso so i tried to put the sound file of the iso in my hype file programm but it doesn't change anything... Can you help me ?? :)</p>
+  - id: 66401184
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2015-06-14 22:21"
+    signature: true
+    body: |-
+      <blockquote><p class="forum-quote-meta"><a href="/forum/members/131026625-lfxoise/">lfxoise</a> at June 7, 2015 at 5:07 AM</p>
+      <p>I there! First of all, thank you for everithing, your accurate advices aloued me to play at this wonderfull game, this website is very awesome! But there is one question i would like to ask, i have intalled the game just as you did and it works perfectly but i really would like to play it in french :/ I have a french iso so i tried to put the sound file of the iso in my hype file programm but it doesn't change anything... Can you help me ?? :)</p>
+      </blockquote>
+      <p>Hello lfxoise!Welcome to Hype The Time Quest Forever!<br><br>Sadly it won't work - unlike some of us tend to think each version of Hype is like a diferent game, so you need the complete thing otherwise it won't work correctly. I will DM you on this subject so that I can help you ; )</p>
+  - id: 66411558
+    author: "HeroHype"
+    author_id: 121768707
+    rank: "Moderator"
+    date: "2015-06-16 05:26"
+    signature: true
+    body: |-
+      <blockquote><p class="forum-quote-meta"><a href="/forum/members/50609089-moonlighter/">Moonlighter</a> at June 14, 2015 at 10:21 PM</p>
+      <blockquote><p class="forum-quote-meta"><a href="/forum/members/131026625-lfxoise/">lfxoise</a> at June 7, 2015 at 5:07 AM</p>
+      <p>I there! First of all, thank you for everithing, your accurate advices aloued me to play at this wonderfull game, this website is very awesome! But there is one question i would like to ask, i have intalled the game just as you did and it works perfectly but i really would like to play it in french :/ I have a french iso so i tried to put the sound file of the iso in my hype file programm but it doesn't change anything... Can you help me ?? :)</p>
+      </blockquote>
+      <p>Hello lfxoise!Welcome to Hype The Time Quest Forever!<br><br>Sadly it won't work - unlike some of us tend to think each version of Hype is like a diferent game, so you need the complete thing otherwise it won't work correctly. I will DM you on this subject so that I can help you ; )</p>
+      </blockquote>
+      <p>It works of course :D i am playing german Game with English ISO !</p>
+  - id: 66411559
+    author: "HeroHype"
+    author_id: 121768707
+    rank: "Moderator"
+    date: "2015-06-16 05:27"
+    signature: true
+    body: |-
+      <blockquote><p class="forum-quote-meta"><a href="/forum/members/131026625-lfxoise/">lfxoise</a> at June 7, 2015 at 5:07 AM</p>
+      <p>I there! First of all, thank you for everithing, your accurate advices aloued me to play at this wonderfull game, this website is very awesome! But there is one question i would like to ask, i have intalled the game just as you did and it works perfectly but i really would like to play it in french :/ I have a french iso so i tried to put the sound file of the iso in my hype file programm but it doesn't change anything... Can you help me ?? :)</p>
+      </blockquote>
+      <p>Hey lfxoise,</p>
+      <p>it works if you replace the whole GAMEDATA folder :D</p>
+  - id: 66431239
+    author: "Moonlighter"
+    author_id: 50609089
+    rank: "Site Owner"
+    date: "2015-06-18 14:29"
+    signature: true
+    body: |-
+      <p>Well HeroHype is a hacker in potential so he might be able to help you out hahaha</p>
+  - id: 69477694
+    author: "Steph77"
+    author_id: 134907936
+    rank: "Member"
+    date: "2016-11-11 12:58"
+    signature: false
+    body: |-
+      <p>Hello</p>
+  - id: 69477702
+    author: "Steph77"
+    author_id: 134907936
+    rank: "Member"
+    date: "2016-11-11 13:00"
+    signature: false
+    body: |-
+      <p>Hello, I can read hype I am under Windows 7 64 bits the game starts well but I can not get it in French I do not know how to do ..</p>
+  - id: 69513396
+    author: "Crul"
+    author_id: 134996785
+    rank: "Member"
+    date: "2016-11-26 18:39"
+    signature: false
+    body: |-
+      <p>Hey guys, just found out about this project and page today after several frustrating hours of trying to get Hype to run on my Win7 64bit machine. I made it through the installation, I followed all guidelines I could find - I installed the nGlide patch and I also made sure the patch was actually installed. Now, one link I found offered a french executable, MaiDFXvr_bleu.exe, about ten times bigger than the regular .exe; when trying to run the game with this .exe &amp; nGlide, the 3dfx logo shows up, and then I get stuck on a white screen (no error message, but completely frozen screen).</p>
+      <p>With the original MaiDFXvr._bleu.exe, which I believe is also the one the patch is affecting (pure assumption), I do not see any 3dfx logo, the game just instantly crashes with an "CPAPROJ MCF has stopped working" message. My game DVD is working, I did an install from there with an installer specifically made for this task. Installation seems fine, also. I own the german version of the game, which is what I also specified during installation &amp; in the ubi.ini file.</p>
+      <p>Any help would be much appreciated!</p>
+  - id: 70524629
+    author: "Nikman555"
+    author_id: 140305539
+    rank: "Member"
+    date: "2020-03-06 22:12"
+    signature: false
+    body: |-
+      <p>Here is the Link to the newest installer for 64Bit systems. <a href="https://github.com/SuiMachine/Hype-The-Time-Quest-Installer" rel="nofollow noopener">https://github.com/SuiMachine/Hype-The-Time-Quest-Installer</a></p>
+  - id: 70534473
+    author: "KeytarCat"
+    author_id: 140446714
+    rank: "Member"
+    date: "2020-04-11 09:33"
+    signature: false
+    body: |-
+      <p>I got everything running by following the instructions on this site, but my game crashes when I enter the load trigger after the first save point. I get loading screen with moving bar, then "Program has stopped working". Is this a known issue that I didn't see in the thread, or is my compy just being jank again?<br>Thanks</p>
+  - id: 70541092
+    author: "Darnok_PL"
+    author_id: 125245904
+    rank: "Member"
+    date: "2020-05-02 08:54"
+    signature: true
+    body: |-
+      <p>Hello KeytarCat!<br>The site here is not too active anymore, you had better join our Discord:<br><a href="https://discord.gg/PGqVJTP" rel="nofollow noopener">https://discord.gg/PGqVJTP</a><br><br>As for your problem, if you have use an alternative installer, I'd suggest you to copy all files from "exe/DLL MFC" directory on your ISO to "Hype - time Time Quest" installation directory - that's known to be missing in the alternative installer.</p>
+---

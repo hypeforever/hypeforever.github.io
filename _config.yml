@@ -27,8 +27,16 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Read-only archive of the old forum "The Inn": one file per topic in _forum,
+# one file per member with at least one post in _members (no member index page)
 collections:
   forum:
+    output: true
+    permalink: /forum/topics/:name/
+  members:
+    output: true
+    permalink: /forum/members/:name/
   # Photo albums: one file per album in _albums (named like the album folder in
   # assets/photos/, created by _tools/build_photos.py), data in _data/photos.yml
   albums:
@@ -40,3 +48,11 @@ defaults:
       type: albums
     values:
       layout: album
+  - scope:
+      type: forum
+    values:
+      layout: forum-topic
+  - scope:
+      type: members
+    values:
+      layout: forum-member

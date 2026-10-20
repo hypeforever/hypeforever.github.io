@@ -1,0 +1,28 @@
+---
+layout: page
+---
+{% comment %}
+  Start page of the forum archive: the page content as introduction, then one
+  box per category group (every <h2> starts a new box in the page layout).
+{% endcomment %}
+{{ content }}
+
+{% for group in site.data.forum %}
+<h2>{{ group.group }}</h2>
+
+<ul class="forum-list">
+  {% for category in group.categories %}
+  {% assign topics = site.forum | where: "category", category.slug %}
+  {% assign posts = 0 %}
+  {% for topic in topics %}{% assign posts = posts | plus: topic.posts.size %}{% endfor %}
+  <li>
+    <a href="{{ '/forum/' | append: category.slug | append: '/' | relative_url }}">{{ category.title }}</a>
+    <span class="forum-list-meta">
+      {{ topics.size }} {% if topics.size == 1 %}topic{% else %}topics{% endif %} ·
+      {{ posts }} {% if posts == 1 %}post{% else %}posts{% endif %}
+    </span>
+    <br>{{ category.description }}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

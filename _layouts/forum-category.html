@@ -1,0 +1,39 @@
+---
+layout: page
+---
+{% comment %}
+  Topic list of one forum category: sticky topics first, then by last post.
+{% endcomment %}
+{% for group in site.data.forum %}
+  {% for c in group.categories %}
+    {% if c.slug == page.category %}{% assign category = c %}{% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign topics = site.forum | where: "category", page.category %}
+{% assign sticky = topics | where: "sticky", true | sort: "last_post" | reverse %}
+{% assign normal = topics | where: "sticky", false | sort: "last_post" | reverse %}
+{% assign sorted = sticky | concat: normal %}
+
+<p class="forum-breadcrumb">
+  <a href="{{ '/forum/' | relative_url }}">The Inn</a> › {{ category.title }}
+</p>
+
+<p>{{ category.description }}</p>
+
+{% if sorted.size > 0 %}
+<ul class="forum-list">
+  {% for topic in sorted %}
+  <li>
+    {% if topic.sticky %}<span class="forum-sticky">Sticky:</span>{% endif %}
+    <a href="{{ topic.url | relative_url }}">{{ topic.title | escape }}</a>
+    <span class="forum-list-meta">
+      by {{ topic.started_by | escape }} ·
+      {{ topic.posts.size }} {% if topic.posts.size == 1 %}post{% else %}posts{% endif %} ·
+      last post <time datetime="{{ topic.last_post | date: '%Y-%m-%d' }}">{{ topic.last_post | date: "%B %-d, %Y" }}</time>
+    </span>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No topics have been archived in this category.</p>
+{% endif %}
