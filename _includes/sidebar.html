@@ -3,10 +3,12 @@
   <nav class="site-nav" aria-label="Main navigation">
     <ul>
       {% for item in site.data.navigation %}
+      {% comment %}An item is also active on its subpages (blog posts, forum topics, ...){% endcomment %}
+      {% assign prefix = page.url | slice: 0, item.url.size %}
       <li>
         {% if page.url == item.url %}
         <a href="{{ item.url | relative_url }}" class="active" aria-current="page">{{ item.title }}</a>
-        {% elsif page.layout == "post" and item.url == "/blog/" %}
+        {% elsif prefix == item.url %}
         <a href="{{ item.url | relative_url }}" class="active">{{ item.title }}</a>
         {% else %}
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
