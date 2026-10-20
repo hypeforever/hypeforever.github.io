@@ -36,8 +36,8 @@ To do this, you'll need to emulate a glide graphic board:
 
 Following these steps, Hype The Time Quest should now work perfectly. If
 something fails, try changing the default settings on the nGlide configurator...
-and you can always ask for help on "[The Inn](http://hypeforever.webs.com/apps/forums/)"
-(forum on this site).
+and you can always look for help in "[The Inn]({{ "/forum/" | relative_url }})"
+(the archive of the old forum on this site).
 
 This is it. Thank you a lot, Zeus for creating this amazing software.
 
@@ -126,7 +126,7 @@ install with nGlide, patches, savegame fix and all - although you'll still need
 the cd to play it. Please visit this thread for more information. Also, be kind
 and thank Spardo for the awesome work!
 
-<http://hypeforever.webs.com/apps/forums/topics/show/12376812-installation-folders-for-foreign-languages->
+[Installation folders for foreign languages]({{ "/forum/topics/12376812-installation-folders-for-foreign-languages/" | relative_url }})
 
 Our member Darnok_PL has created a savegame pack for those having troubles when
 it comes to saving the game in the Polish version of Hype. You can download
@@ -137,6 +137,6 @@ files in the "[Downloads]({{ "/downloads/" | relative_url }})" section.
 
 Member Grizzly Bear has kindly posted a tutorial on how to play under Mac /
 Linux using Wineskin. You can check all the inf o on his
-[original post](http://hypeforever.webs.com/apps/forums/topics/show/9286503-hype-the-time-quest-on-mac).
+[original post]({{ "/forum/topics/9286503-hype-the-time-quest-on-mac/" | relative_url }}).
 
 Don't forget to thank Mr. Grizzly Bear for his work!

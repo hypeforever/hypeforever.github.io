@@ -54,7 +54,7 @@ use another slot for the save.
 
 ### Save Folders
 
-Our member Marin ([Enost](http://hypeforever.webs.com/apps/profile/107962693/))
+Our member Marin ([Enost]({{ "/forum/members/107962693-enost/" | relative_url }}))
 uploaded some save folders, that you can save over if you get the savegame error
 in the German version.
 
@@ -64,7 +64,7 @@ in the German version.
 
 ### Polish Version Savegames
 
-Our member [Darnok_PL](http://hypeforever.webs.com/apps/profile/125245904/) has
+Our member [Darnok_PL]({{ "/forum/members/125245904-darnok-pl/" | relative_url }}) has
 uploaded a "Starter Pack" savegame for people who have trouble with saving the
 game under newer systems. You can download it here
 
@@ -72,11 +72,11 @@ game under newer systems. You can download it here
 
 ### Hype Complete Polish Version
 
-Our memeber [Spardo](http://hypeforever.webs.com/apps/profile/107962693/) has
+Our memeber [Spardo]({{ "/forum/members/108361662-spardo/" | relative_url }}) has
 created and uploaded a complete version of Hype - The Time Quest installation
 folders for those who want to play it. It's a complete install with nGlide,
 patches, savegame fix and all - although you'll still need the cd to play it.
 Please click
-[here](http://hypeforever.webs.com/apps/forums/topics/show/12376812-installation-folders-for-foreign-languages-)
+[here]({{ "/forum/topics/12376812-installation-folders-for-foreign-languages/" | relative_url }})
 and visit this thread for more information. Also, be kind and thank Spardo for
 the awesome work!

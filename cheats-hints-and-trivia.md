@@ -42,7 +42,7 @@ Type these codes in-game.
 ## Gogoud's Manor I Cheat Code
 
 This is a relatively recent discovery of our member
-[Darnok_PL](http://hypeforever.webs.com/apps/profile/125245904/).
+[Darnok_PL]({{ "/forum/members/125245904-darnok-pl/" | relative_url }}).
 
 Apparently not listed anywhere over the internet, it seems programmers left
 something behind meant to be used for testing purposes...or not, it's unknown.

@@ -31,10 +31,10 @@ the moment.
   2010.
 - In 2011, there wasn't a single new member joining Hype Forever.
 - In 2012 our only new member was our faithful Diego
-  ([Restrek](http://hypeforever.webs.com/apps/profile/101390347/)).
+  ([Restrek]({{ "/forum/members/101390347-lherzen/" | relative_url }})).
 - In January 2013, Hype Forever had only a dozen members, and almost none of
   them were very active. I was about to delete the site when
-  [thexdeity](http://hypeforever.webs.com/apps/profile/105226754/) joined
+  [thexdeity]({{ "/forum/members/105226754-thexdeity/" | relative_url }}) joined
   it, and brought activity in with his Let's Play Videos, posts and friendly
   support. That was the main factor that encouraged me to add the downloads,
   the soundtrack, the fixes and all, which brought many more members to the
@@ -44,12 +44,12 @@ the moment.
   remake and a sequel of the original Hype The Time Quest game, created for new
   generations and people willing to replay the game, in a improved way. The
   project is currently being worked on, with members from the Hype community,
-  such as [Me](http://hypeforever.webs.com/apps/profile/50609089/),
-  [Enost](http://hypeforever.webs.com/apps/profile/107962693/),
-  [Paiki Pe](http://hypeforever.webs.com/apps/profile/116325162/),
-  [Eddex](http://hypeforever.webs.com/apps/profile/114955113/),
-  [Bearmadrid](http://hypeforever.webs.com/apps/profile/113647136/),
-  [Melted Plastyk](http://hypeforever.webs.com/apps/profile/116937282/) and
+  such as [Me]({{ "/forum/members/50609089-moonlighter/" | relative_url }}),
+  [Enost]({{ "/forum/members/107962693-enost/" | relative_url }}),
+  [Paiki Pe]({{ "/forum/members/116325162-paikipe/" | relative_url }}),
+  [Eddex]({{ "/forum/members/114955113-eddex/" | relative_url }}),
+  [Bearmadrid]({{ "/forum/members/113647136-bearmadrid/" | relative_url }}),
+  [Melted Plastyk]({{ "/forum/members/116937282-melted-plastyk/" | relative_url }}) and
   others.
   When we have something ready, it will be avaliable here on Hype Forever, as a
   free download for everyone. Special thanks for Marin (Enost), who is helping
