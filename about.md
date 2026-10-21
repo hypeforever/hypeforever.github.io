@@ -15,7 +15,7 @@ is my favorite game, I decided I had to do something for it.
 
 Back when I became motivated to create the site, I had to search for a free
 alternative to make it. The main option was blogspot, but it simply didn't have
-all the resources I wanted. Plus, if you go to http://hypeforever.blogspot.com/,
+all the resources I wanted. Plus, if you go to https://hypeforever.blogspot.com/,
 you'll find some...quite disturbing content.
 
 I am aware of the many flaws of the .webs pages. I have been trying to organize

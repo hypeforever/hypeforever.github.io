@@ -13,7 +13,17 @@
         {% include sidebar.html %}
 
         <main class="site-main">
-          {{ content }}
+          {% comment %}
+            External links open in a new tab: every <a href="http..."> gets
+            target="_blank". Links that set target themselves put it before
+            href, so they are not matched twice. Links to this site stay as they are.
+          {% endcomment %}
+          {% capture own_site %}<a target="_blank" rel="noopener" href="{{ site.url }}{% endcapture %}
+          {% capture own_site_plain %}<a href="{{ site.url }}{% endcapture %}
+          {{ content
+            | replace: '<a href="http://', '<a target="_blank" rel="noopener" href="http://'
+            | replace: '<a href="https://', '<a target="_blank" rel="noopener" href="https://'
+            | replace: own_site, own_site_plain }}
         </main>
       </div>
 

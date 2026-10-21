@@ -8,7 +8,7 @@ a short chronological overview about its structure.
 
 # Website
 
-[hypeforever.webs.com](http://hypeforever.webs.com) is the official website of
+[hypeforever.webs.com]({{ "/" | relative_url }}) is the official website of
 this project. Originally created in 2009, it recently got a design refresh by
 NeoMoonlighter & is one of the top Google results if you search for Hype: The
 Time Quest.
@@ -29,7 +29,7 @@ The Hype Forever team is currently actively working on a remake of the original
 Hype: The Time Quest game. It's still in a very early stage and the progress
 will be posted on this blog.
 
-The game will use Unity ([unity3d.com](http://unity3d.com)) as its engine and
+The game will use Unity ([unity3d.com](https://unity3d.com)) as its engine and
 will be available for Windows, OS X and Linux.
 
 # Blog

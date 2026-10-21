@@ -15,13 +15,13 @@ dedicated or related to Hype The Time Quest
 - [http://thexdeity.webs.com/](http://thexdeity.webs.com/) - Member "Thexdeity"
   Page. He has provided many videos on PS2 Hype The Time Quest playthrough and is
   a great Hype fan. Give him some support!
-- [http://hypethefilm.blogspot.com](https://hypethefilm.blogspot.com/) - An
+- [https://hypethefilm.blogspot.com](https://hypethefilm.blogspot.com/) - An
   amazing project by member
   [Bearmadrid]({{ "/forum/members/113647136-bearmadrid/" | relative_url }}), which
   intends to film a movie based on Hype. He has been actively registering the
   filming activity in this blog, check it out!
-- [http://www.fisicx.com/hype/index.html](http://www.fisicx.com/hype/index.html) -
+- [https://www.fisicx.com/hype/index.html](https://www.fisicx.com/hype/index.html) -
   This site has many things on Hype: Waltroughs, Cheats, Hints, Beehive Game
   locations and more!
-- [http://www.ubi.com](https://www.ubisoft.com/) - The game developers' company
+- [https://www.ubi.com](https://www.ubisoft.com/) - The game developers' company
   website.
