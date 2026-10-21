@@ -730,9 +730,27 @@
     }
 }
 
+// Boxed notice with an info icon on the left
 .forum-notice {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 14px;
+    background-color: #eef7fa;
+    border: 1px solid #bfe0ea;
+    border-radius: 8px;
     font-size: $small-font-size;
-    font-style: italic;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.forum-notice-icon {
+    flex: none;
+    font-size: 18px;
+    color: $accent-color;
 }
 
 .forum-avatar-link {

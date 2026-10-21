@@ -58,7 +58,13 @@ defaults:
       type: forum
     values:
       layout: forum-topic
+      heading: The Inn (Forum)
   - scope:
       type: members
     values:
       layout: forum-member
+      heading: The Inn (Forum)
+  - scope:
+      path: forum
+    values:
+      heading: The Inn (Forum)
