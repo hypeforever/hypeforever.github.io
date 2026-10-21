@@ -1,0 +1,27 @@
+---
+layout: page
+title: Page not found
+permalink: /404.html
+sitemap: false
+---
+{% comment %}
+  GitHub Pages shows this page for every unknown address, so all links are
+  root-relative. Old addresses of hypeforever.webs.com end up here, too.
+{% endcomment %}
+<p class="not-found-lead">Lost in time? This page doesn't exist (anymore).</p>
+
+<p>
+  Maybe it was moved when the old Hype Forever site on webs.com was rebuilt,
+  or the address has a typo. These pages may help you find your way:
+</p>
+
+<ul>
+  <li><a href="{{ '/' | relative_url }}">Home</a></li>
+  <li><a href="{{ '/downloads/' | relative_url }}">Downloads</a> and <a href="{{ '/bugs-and-problems/' | relative_url }}">Bugs and Problems</a></li>
+  <li><a href="{{ '/forum/' | relative_url }}">The Inn (Forum)</a>, the archive of the old forum</li>
+  <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+</ul>
+
+<p class="not-found-divider">
+  <img src="{{ '/assets/images/layout/divider.png' | relative_url }}" width="584" height="92" alt="">
+</p>

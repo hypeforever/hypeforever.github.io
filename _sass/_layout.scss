@@ -901,3 +901,24 @@
     padding-left: 12px;
     padding-right: 12px;
 }
+
+/**
+ * 404 page
+ */
+.not-found-lead {
+    font-size: 19px;
+    color: $text-color;
+}
+
+.not-found-divider {
+    text-align: center;
+    margin-top: $spacing-unit;
+
+    img {
+        width: 75%;
+
+        @include media-query($on-palm) {
+            width: 100%;
+        }
+    }
+}
