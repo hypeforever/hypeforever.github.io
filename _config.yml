@@ -48,7 +48,19 @@ collections:
     output: true
     permalink: /videos/:name/
 
+# Large preview card when pages are shared on social media (jekyll-seo-tag)
+twitter:
+  card: summary_large_image
+
 defaults:
+  # Preview image for social media (1200x630), used by every page without its own image
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /assets/images/layout/og-image.jpg
+        width: 1200
+        height: 630
   - scope:
       type: albums
     values:
