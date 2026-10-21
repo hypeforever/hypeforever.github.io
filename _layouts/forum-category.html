@@ -14,6 +14,8 @@ layout: page
 {% assign normal = topics | where: "sticky", false | sort: "last_post" | reverse %}
 {% assign sorted = sticky | concat: normal %}
 
+{% include forum-notice.html %}
+
 <p class="forum-breadcrumb">
   <a href="{{ '/forum/' | relative_url }}">The Inn</a> › {{ category.title }}
 </p>

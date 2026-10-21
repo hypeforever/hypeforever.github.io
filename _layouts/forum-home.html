@@ -5,6 +5,8 @@ layout: page
   Start page of the forum archive: the page content as introduction, then one
   box per category group (every <h2> starts a new box in the page layout).
 {% endcomment %}
+{% include forum-notice.html %}
+
 {{ content }}
 
 {% for group in site.data.forum %}

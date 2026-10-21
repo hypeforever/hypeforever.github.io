@@ -11,6 +11,8 @@ layout: page
   {% endfor %}
 {% endfor %}
 
+{% include forum-notice.html %}
+
 <p class="forum-breadcrumb">
   <a href="{{ '/forum/' | relative_url }}">The Inn</a> ›
   <a href="{{ '/forum/' | append: category.slug | append: '/' | relative_url }}">{{ category.title }}</a>
