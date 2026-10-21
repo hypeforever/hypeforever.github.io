@@ -23,7 +23,11 @@ layout: page
 <p>{{ category.description }}</p>
 
 {% if sorted.size > 0 %}
-<ul class="forum-list">
+<div class="forum-list-head">
+  <span>Topic</span>
+  <span>{{ sorted.size }} {% if sorted.size == 1 %}topic{% else %}topics{% endif %}</span>
+</div>
+<ul class="forum-list forum-topic-list">
   {% for topic in sorted %}
   {% assign replies = topic.posts.size | minus: 1 %}
   {% assign starter = site.members | where: "member_id", topic.posts.first.author_id | first %}

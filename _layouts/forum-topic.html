@@ -15,7 +15,8 @@ layout: page
 
 <p class="forum-breadcrumb">
   <a href="{{ '/forum/' | relative_url }}">The Inn</a> ›
-  <a href="{{ '/forum/' | append: category.slug | append: '/' | relative_url }}">{{ category.title }}</a>
+  <a href="{{ '/forum/' | append: category.slug | append: '/' | relative_url }}">{{ category.title }}</a> ›
+  {{ page.title | escape }}
 </p>
 
 <ol class="forum-posts">

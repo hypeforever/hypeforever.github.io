@@ -542,12 +542,22 @@
     }
 }
 
-// Date on the left, post number (permalink) on the right
+// Date on the left, post number (permalink) on the right; a slim line above the post
 .forum-post-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $border-color;
+    font-size: 12px;
+    line-height: 1.3;
+
+    time,
+    .forum-post-number {
+        font-size: inherit;
+    }
 }
 
 .forum-post-number {
@@ -731,4 +741,23 @@
     &:hover .forum-avatar {
         opacity: 0.85;
     }
+}
+
+// Header bar above the topic list of a category; the list is indented to match
+.forum-list-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 22px 0 6px;
+    padding: 5px 12px;
+    background-color: #ececec;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: $text-color;
+}
+
+.forum-topic-list > li {
+    padding-left: 12px;
+    padding-right: 12px;
 }
