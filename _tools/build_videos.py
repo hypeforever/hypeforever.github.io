@@ -6,7 +6,7 @@ channel and run this script. It only adds what is missing:
 
 - `slug` (from the title, made unique) for videos without one
 - `available` (checked via YouTube oEmbed) for videos without one
-- the thumbnail assets/videos/thumbs/<youtube_id>.jpg (320x180 from YouTube)
+- the thumbnail assets/videos/thumbs/yt-<youtube_id>.jpg (320x180 from YouTube)
   and the `thumb` path, if missing
 - the video page _videos/<slug>.html; its title is kept in sync with
   videos.yml (the page shows the data from videos.yml)
@@ -29,7 +29,8 @@ SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(SITE, "_data", "videos.yml")
 PAGES_DIR = os.path.join(SITE, "_videos")
 THUMBS_DIR = os.path.join(SITE, "assets", "videos", "thumbs")
-THUMB_URL = "/assets/videos/thumbs/{}.jpg"
+# "yt-" prefix: Jekyll skips files starting with "_", and some IDs do
+THUMB_URL = "/assets/videos/thumbs/yt-{}.jpg"
 
 HEADER = """\
 # Videos (pages: /videos/ and /videos/<slug>/), grouped by channel.
@@ -67,7 +68,7 @@ def download_thumb(youtube_id):
     if status != 200 or not data:
         return False
     os.makedirs(THUMBS_DIR, exist_ok=True)
-    with open(os.path.join(THUMBS_DIR, youtube_id + ".jpg"), "wb") as f:
+    with open(os.path.join(THUMBS_DIR, f"yt-{youtube_id}.jpg"), "wb") as f:
         f.write(data)
     return True
 
@@ -132,7 +133,7 @@ def main():
                 video["available"] = is_available(video["youtube_id"])
                 print(f"  {video['slug']}: {'available' if video['available'] else 'NOT available'} on YouTube")
 
-            thumb_path = os.path.join(THUMBS_DIR, video["youtube_id"] + ".jpg")
+            thumb_path = os.path.join(THUMBS_DIR, f"yt-{video['youtube_id']}.jpg")
             if not os.path.exists(thumb_path):
                 if download_thumb(video["youtube_id"]):
                     print(f"  thumbnail {video['youtube_id']}.jpg")

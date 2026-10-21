@@ -1,0 +1,60 @@
+---
+layout: default
+---
+{% comment %}
+  One video. The page file in _videos/ is named like the video's slug,
+  everything else comes from _data/videos.yml. Prev/Next stay within the channel.
+{% endcomment %}
+{% for c in site.data.videos %}
+  {% for v in c.videos %}
+    {% if v.slug == page.slug %}
+      {% assign video = v %}
+      {% assign channel = c %}
+      {% assign index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign prev_index = index | minus: 1 %}
+{% assign next_index = index | plus: 1 %}
+{% if index > 0 %}{% assign prev = channel.videos[prev_index] %}{% endif %}
+{% assign next = channel.videos[next_index] %}
+
+<section class="box video">
+
+  <header class="box-header">
+    <h1 class="box-title">{{ video.title }}</h1>
+  </header>
+
+  <div class="box-content">
+    <p class="video-nav">
+      <span>
+        <a href="{{ "/videos/" | relative_url }}">All Videos</a> &gt;
+        <a href="{{ "/videos/" | relative_url }}#{{ channel.slug }}">{{ channel.title }}</a>
+      </span>
+      <span>
+        {% if prev %}<a href="{{ "/videos/" | append: prev.slug | append: "/" | relative_url }}" rel="prev">&laquo; Prev</a>{% else %}&laquo; Prev{% endif %}
+        |
+        {% if next %}<a href="{{ "/videos/" | append: next.slug | append: "/" | relative_url }}" rel="next">Next &raquo;</a>{% else %}Next &raquo;{% endif %}
+      </span>
+    </p>
+
+    {% if video.available %}
+      {% include youtube.html id=video.youtube_id title=video.title %}
+    {% else %}
+      <div class="video-unavailable">
+        <i class="fa-solid fa-video-slash" aria-hidden="true"></i>
+        <p>This video is no longer available on YouTube.</p>
+      </div>
+    {% endif %}
+
+    {% if video.description != "" %}
+    <p class="video-description">{{ video.description | escape | newline_to_br }}</p>
+    {% endif %}
+
+    <p class="video-meta">
+      Posted by {% include member-link.html id=video.author_id name=video.author %}
+      on <time datetime="{{ video.posted | date: '%Y-%m-%dT%H:%M' }}">{{ video.posted | date: "%B %-d, %Y at %-I:%M %p" }}</time>
+    </p>
+  </div>
+
+</section>

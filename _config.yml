@@ -44,9 +44,8 @@ collections:
     permalink: /photos/:name/
   # Videos: one file per video in _videos (named like the video's slug, created
   # by _tools/build_videos.py), data in _data/videos.yml
-  # Pages are switched on (output: true) together with the video layout.
   videos:
-    output: false
+    output: true
     permalink: /videos/:name/
 
 defaults:
@@ -54,6 +53,10 @@ defaults:
       type: albums
     values:
       layout: album
+  - scope:
+      type: videos
+    values:
+      layout: video
   - scope:
       type: forum
     values:

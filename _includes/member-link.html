@@ -1,0 +1,11 @@
+{%- comment -%}
+  Name of a member of the old site, linked to his forum member page if there is
+  one (_members, matched by member_id), otherwise just the name.
+  Usage: {% include member-link.html id=video.author_id name=video.author %}
+{%- endcomment -%}
+{%- assign member = site.members | where: "member_id", include.id | first -%}
+{%- if member -%}
+<a href="{{ member.url | relative_url }}">{{ include.name | escape }}</a>
+{%- else -%}
+{{ include.name | escape }}
+{%- endif -%}
