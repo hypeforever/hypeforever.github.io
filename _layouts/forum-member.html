@@ -7,12 +7,13 @@ layout: page
   `posts` is the post count webs.com showed, it includes posts that are not
   in the archive (e.g. deleted ones).
 {% endcomment %}
-{% assign count = 0 %}
-{% for topic in site.forum %}
-  {% for post in topic.posts %}
-    {% if post.author_id == page.member_id %}{% assign count = count | plus: 1 %}{% endif %}
-  {% endfor %}
-{% endfor %}
+{% comment %}
+  Collect the member's posts across all topics as "date~url~title" strings,
+  so they can be sorted by date (newest first).
+{% endcomment %}
+{% capture entries %}{% for topic in site.forum %}{% for post in topic.posts %}{% if post.author_id == page.member_id %}{{ post.date }}~{{ topic.url }}#post-{{ post.id }}~{{ topic.title }}^{% endif %}{% endfor %}{% endfor %}{% endcapture %}
+{% assign entries = entries | split: "^" | sort | reverse %}
+{% assign count = entries.size %}
 
 <p class="forum-breadcrumb">
   <a href="{{ '/forum/' | relative_url }}">The Inn</a> › Member
@@ -50,20 +51,24 @@ layout: page
 
 <h2>Posts</h2>
 
+{% comment %}The 10 newest posts are shown, the rest can be expanded.{% endcomment %}
 <ul class="forum-list">
-  {% for topic in site.forum %}
-    {% for post in topic.posts %}
-      {% if post.author_id == page.member_id %}
-      <li>
-        <a href="{{ topic.url | relative_url }}#post-{{ post.id }}">{{ topic.title | escape }}</a>
-        <span class="forum-list-meta">
-          <time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-        </span>
-      </li>
-      {% endif %}
-    {% endfor %}
+  {% for entry in entries limit: 10 %}
+  {% include forum-member-post.html entry=entry %}
   {% endfor %}
 </ul>
+
+{% if count > 10 %}
+<details class="forum-more">
+  {% assign older = count | minus: 10 %}
+  <summary>Show {{ older }} older {% if older == 1 %}post{% else %}posts{% endif %}</summary>
+  <ul class="forum-list">
+    {% for entry in entries offset: 10 %}
+    {% include forum-member-post.html entry=entry %}
+    {% endfor %}
+  </ul>
+</details>
+{% endif %}
 
 {% if page.comments.size > 0 %}
 <h2>Comments</h2>

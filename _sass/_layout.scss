@@ -521,21 +521,48 @@
     margin: 0;
 }
 
+// Every post (and profile comment) is a card of its own
 .forum-post {
     display: flex;
     gap: 15px;
-    padding: 15px 0;
-    border-bottom: 1px solid $border-color;
+    margin-bottom: 12px;
+    padding: 15px;
+    background-color: $box-color;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     overflow-wrap: break-word;
 
-    &:first-child {
-        padding-top: 0;
+    &:last-child {
+        margin-bottom: 0;
     }
 
-    &:last-child {
-        border-bottom: 0;
-        padding-bottom: 0;
+    @include media-query($on-palm) {
+        padding: 12px;
     }
+}
+
+// Date on the left, post number (permalink) on the right
+.forum-post-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.forum-post-number {
+    font-size: $small-font-size;
+    color: $text-color-light;
+    text-decoration: none;
+
+    &:hover {
+        color: $accent-color;
+    }
+}
+
+// Highlight the post a permalink points to
+.forum-post:target {
+    border-color: $accent-color;
 }
 
 .forum-post-meta {
@@ -637,5 +664,58 @@
 
     p {
         margin-bottom: 0;
+    }
+}
+
+// Member details below the profile picture in a topic; on phones they move
+// next to the picture, above the post
+.forum-post-member {
+    flex: none;
+    width: 100px;
+
+    @include media-query($on-palm) {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        width: auto;
+    }
+}
+
+.forum-post-member-info {
+    margin-top: 6px;
+    font-size: $small-font-size;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+
+    > span {
+        display: block;
+    }
+
+    .forum-post-author {
+        font-size: $base-font-size;
+    }
+
+    @include media-query($on-palm) {
+        margin-top: 0;
+    }
+}
+
+.forum-posts .forum-post {
+    @include media-query($on-palm) {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.forum-more {
+    margin-top: 12px;
+
+    > summary {
+        cursor: pointer;
+        color: $accent-color;
+    }
+
+    > .forum-list {
+        margin-top: 10px;
     }
 }

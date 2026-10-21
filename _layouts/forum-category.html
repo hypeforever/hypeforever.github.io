@@ -23,12 +23,14 @@ layout: page
 {% if sorted.size > 0 %}
 <ul class="forum-list">
   {% for topic in sorted %}
+  {% assign replies = topic.posts.size | minus: 1 %}
+  {% assign starter = site.members | where: "member_id", topic.posts.first.author_id | first %}
   <li>
     {% if topic.sticky %}<span class="forum-sticky">Sticky:</span>{% endif %}
     <a href="{{ topic.url | relative_url }}">{{ topic.title | escape }}</a>
     <span class="forum-list-meta">
-      by {{ topic.started_by | escape }} ·
-      {{ topic.posts.size }} {% if topic.posts.size == 1 %}post{% else %}posts{% endif %} ·
+      by {% if starter %}<a href="{{ starter.url | relative_url }}">{{ topic.started_by | escape }}</a>{% else %}{{ topic.started_by | escape }}{% endif %} ·
+      {{ replies }} {% if replies == 1 %}reply{% else %}replies{% endif %} ·
       last post <time datetime="{{ topic.last_post | date: '%Y-%m-%d' }}">{{ topic.last_post | date: "%B %-d, %Y" }}</time>
     </span>
   </li>

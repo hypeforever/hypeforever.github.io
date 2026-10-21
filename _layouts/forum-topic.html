@@ -20,15 +20,22 @@ layout: page
   {% for post in page.posts %}
   {% assign member = site.members | where: "member_id", post.author_id | first %}
   <li class="forum-post" id="post-{{ post.id }}">
-    {% include forum-avatar.html member=member name=post.author %}
-    <div class="forum-post-main">
-      <p class="forum-post-meta">
+    {% comment %}Member details below the profile picture, like on the old forum{% endcomment %}
+    <div class="forum-post-member">
+      {% include forum-avatar.html member=member name=post.author %}
+      <div class="forum-post-member-info">
         <span class="forum-post-author">
           {% if member %}<a href="{{ member.url | relative_url }}">{{ post.author | escape }}</a>{% else %}{{ post.author | escape }}{% endif %}
         </span>
-        {% if post.rank != "" %}<span class="forum-post-rank">{{ post.rank | escape }}</span>{% endif %}
-        {% if member.posts %}<span class="forum-post-rank">Posts: {{ member.posts }}</span>{% endif %}
+        {% if post.rank != "" %}<span>{{ post.rank | escape }}</span>{% endif %}
+        {% if member.posts %}<span>Posts: {{ member.posts }}</span>{% endif %}
+      </div>
+    </div>
+    <div class="forum-post-main">
+      <p class="forum-post-meta forum-post-head">
         <time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M' }}">{{ post.date | date: "%B %-d, %Y at %-I:%M %p" }}</time>
+        {% comment %}Numbered like in other forums: the opening post is #1{% endcomment %}
+        <a class="forum-post-number" href="#post-{{ post.id }}" title="Permalink to this post">#{{ forloop.index }}</a>
       </p>
       <div class="forum-post-body">
         {{ post.body }}

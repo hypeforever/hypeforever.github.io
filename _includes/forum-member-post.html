@@ -1,0 +1,11 @@
+{% comment %}
+  One post in the list on a member page.
+  Parameter: entry ("date~url~title", see _layouts/forum-member.html)
+{% endcomment %}
+{% assign parts = include.entry | split: "~" %}
+<li>
+  <a href="{{ parts[1] | relative_url }}">{{ parts[2] | escape }}</a>
+  <span class="forum-list-meta">
+    <time datetime="{{ parts[0] | date: '%Y-%m-%dT%H:%M' }}">{{ parts[0] | date: "%B %-d, %Y" }}</time>
+  </span>
+</li>
