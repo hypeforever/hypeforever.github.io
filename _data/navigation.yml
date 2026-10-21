@@ -1,6 +1,4 @@
 # Main navigation in the sidebar (in this order)
-- title: Blog
-  url: /blog/
 - title: About Hype Forever
   url: /about/
 - title: Cheats, Hints and Trivia
@@ -11,13 +9,15 @@
   url: /bugs-and-problems/
 - title: Music – Soundtrack
   url: /music-soundtrack/
+- title: The Inn (Forum)
+  url: /forum/
+- title: Blog
+  url: /blog/
 - title: Photos
   url: /photos/
 - title: Videos
   url: /videos/
-- title: Links
-  url: /links/
-- title: The Inn (Forum)
-  url: /forum/
 - title: Guestbook
   url: /guestbook/
+- title: Links
+  url: /links/
