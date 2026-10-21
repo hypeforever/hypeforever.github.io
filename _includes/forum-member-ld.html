@@ -1,0 +1,30 @@
+{% comment %}
+  A member profile as structured data (ProfilePage with a Person).
+  Parameter: count (posts of the member in the archive)
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ page.url | absolute_url | jsonify }},
+  {%- if page.joined %}
+  "dateCreated": {{ page.joined | date: '%Y-%m-%d' | jsonify }},
+  {%- endif %}
+  "mainEntity": {
+    "@type": "Person",
+    "name": {{ page.title | jsonify }},
+    "identifier": {{ page.member_id | append: '' | jsonify }},
+    {%- if page.avatar %}
+    "image": {{ page.avatar | absolute_url | jsonify }},
+    {%- endif %}
+    {%- if page.about != "" %}
+    "description": {{ page.about | strip_html | normalize_whitespace | jsonify }},
+    {%- endif %}
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/WriteAction",
+      "userInteractionCount": {{ include.count }}
+    }
+  }
+}
+</script>

@@ -20,6 +20,10 @@ layout: page
   <a href="{{ '/forum/' | relative_url }}">The Inn</a> › {{ category.title }}
 </p>
 
+<h1 class="forum-title">{{ category.title }}</h1>
+
+{% include forum-breadcrumb-ld.html name2=category.title %}
+
 <p>{{ category.description }}</p>
 
 {% if sorted.size > 0 %}

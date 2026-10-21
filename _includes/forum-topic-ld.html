@@ -1,0 +1,37 @@
+{% comment %}
+  A forum topic as structured data (DiscussionForumPosting): the first post
+  is the posting, all others are comments. Used by search engines for their
+  "discussions and forums" results. Dates have no time zone (unknown).
+{% endcomment %}
+{%- assign first = page.posts.first -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DiscussionForumPosting",
+  "@id": {{ page.url | absolute_url | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "headline": {{ page.title | jsonify }},
+  "text": {{ first.body | strip_html | normalize_whitespace | jsonify }},
+  "datePublished": {{ first.date | date: '%Y-%m-%dT%H:%M:00' | jsonify }},
+  {%- assign m = site.members | where: "member_id", first.author_id | first %}
+  "author": { "@type": "Person", "name": {{ first.author | jsonify }}{% if m %}, "url": {{ m.url | absolute_url | jsonify }}{% endif %} },
+  "isPartOf": { "@type": "WebPage", "name": {{ include.category | jsonify }}, "url": {{ include.category_url | absolute_url | jsonify }} },
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/CommentAction",
+    "userInteractionCount": {{ page.posts.size | minus: 1 }}
+  },
+  "comment": [
+    {%- for post in page.posts offset: 1 %}
+    {%- assign m = site.members | where: "member_id", post.author_id | first %}
+    {
+      "@type": "Comment",
+      "url": {{ page.url | absolute_url | append: '#post-' | append: post.id | jsonify }},
+      "datePublished": {{ post.date | date: '%Y-%m-%dT%H:%M:00' | jsonify }},
+      "author": { "@type": "Person", "name": {{ post.author | jsonify }}{% if m %}, "url": {{ m.url | absolute_url | jsonify }}{% endif %} },
+      "text": {{ post.body | strip_html | normalize_whitespace | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

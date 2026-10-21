@@ -21,10 +21,13 @@ layout: page
   <a href="{{ '/forum/' | relative_url }}">The Inn</a> › Members › {{ page.title | escape }}
 </p>
 
+{% include forum-breadcrumb-ld.html name2=page.title %}
+{% include forum-member-ld.html count=count %}
+
 <div class="forum-profile">
   {% include forum-avatar.html member=page name=page.title %}
   <div>
-    <p class="forum-post-author">{{ page.title | escape }}</p>
+    <h1 class="forum-post-author forum-profile-name">{{ page.title | escape }}</h1>
     <p>
       {% if page.rank != "" %}{{ page.rank | escape }}<br>{% endif %}
       {% if page.joined %}Joined <time datetime="{{ page.joined | date: '%Y-%m-%d' }}">{{ page.joined | date: "%B %-d, %Y" }}</time><br>{% endif %}

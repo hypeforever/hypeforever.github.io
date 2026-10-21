@@ -10,7 +10,7 @@ The source files are hosted at [GitHub](https://github.com/hypeforever/models),
 just like everything else of this project.
 
 
-# Original model
+## Original model
 
 On the following screenshot, you can see the original model. It's the building
 on the left.
@@ -19,7 +19,7 @@ on the left.
 
 The screenshot is taken from Frogoggy's awesome [Let's Play](https://youtu.be/H6LZHPSPK1Q)!
 
-# New model
+## New model
 
 The new model consists of ~4,500 triangles. In Unity, it uses three materials
 (wood, glas & walls/etc). The screenshots are ingame screenshots.

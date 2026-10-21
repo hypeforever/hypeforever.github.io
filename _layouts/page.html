@@ -4,7 +4,8 @@ layout: default
 {% comment %}
   Like on the old webs.com site, every "## Heading" starts a new box.
   Text before the first heading goes into a box with the page title
-  (or `heading`, if set: forum pages show the forum name there).
+  (or `heading`, if set: forum pages show the forum name there, styled like a
+  title but not as <h1>; the page then brings its own <h1>).
 {% endcomment %}
 {% assign sections = content | split: '<h2' %}
 {% assign intro = sections[0] | strip %}
@@ -13,7 +14,11 @@ layout: default
 <article class="box page">
 
   <header class="box-header">
-    <h1 class="box-title">{{ page.heading | default: page.title }}</h1>
+    {% if page.heading and page.heading != page.title %}
+    <p class="box-title box-title-section">{{ page.heading }}</p>
+    {% else %}
+    <h1 class="box-title">{{ page.title }}</h1>
+    {% endif %}
   </header>
 
   <div class="box-content">
@@ -33,7 +38,11 @@ layout: default
 
   {% if forloop.first and intro == "" %}
   <header class="box-header">
-    <h1 class="box-title">{{ page.heading | default: page.title }}</h1>
+    {% if page.heading and page.heading != page.title %}
+    <p class="box-title box-title-section">{{ page.heading }}</p>
+    {% else %}
+    <h1 class="box-title">{{ page.title }}</h1>
+    {% endif %}
   </header>
 
   <div class="box-content">

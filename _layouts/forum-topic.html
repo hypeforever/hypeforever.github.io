@@ -19,6 +19,12 @@ layout: page
   {{ page.title | escape }}
 </p>
 
+<h1 class="forum-title">{{ page.title | escape }}</h1>
+
+{% assign category_url = '/forum/' | append: category.slug | append: '/' %}
+{% include forum-breadcrumb-ld.html name2=category.title url2=category_url name3=page.title %}
+{% include forum-topic-ld.html category=category.title category_url=category_url %}
+
 <ol class="forum-posts">
   {% for post in page.posts %}
   {% assign member = site.members | where: "member_id", post.author_id | first %}

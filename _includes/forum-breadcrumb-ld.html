@@ -1,0 +1,20 @@
+{% comment %}
+  Breadcrumbs as structured data (BreadcrumbList), shown in search results.
+  Parameters: name2/url2 (category), name3 (current page, optional).
+  "The Inn" is always the first item.
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "The Inn", "item": {{ '/forum/' | absolute_url | jsonify }} }
+    {%- if include.name2 %},
+    { "@type": "ListItem", "position": 2, "name": {{ include.name2 | jsonify }}{% if include.url2 %}, "item": {{ include.url2 | absolute_url | jsonify }}{% endif %} }
+    {%- endif %}
+    {%- if include.name3 %},
+    { "@type": "ListItem", "position": 3, "name": {{ include.name3 | jsonify }} }
+    {%- endif %}
+  ]
+}
+</script>
