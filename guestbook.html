@@ -9,18 +9,21 @@ permalink: /guestbook/
 {% endcomment %}
 {% assign entries = site.data.guestbook | reverse %}
 
+<div class="notice">
+  <i class="fa-solid fa-circle-info notice-icon" aria-hidden="true"></i>
+  <p>
+    This is an archive of the guestbook of the old Hype Forever site. It is
+    read-only, so new comments can't be added anymore. The entries were
+    recovered from the
+    <a target="_blank" rel="noopener" href="https://web.archive.org/web/2022/https://hypeforever.webs.com/apps/guestbook/">Internet Archive</a>,
+    which didn't save every page, so some entries are missing. Spam has been
+    removed.
+  </p>
+</div>
+
 <blockquote>
   <p>Leave here a comment on the site!</p>
 </blockquote>
-
-<p>
-  This is an archive of the guestbook of the old Hype Forever site. It is
-  read-only, so new comments can't be added anymore. The entries were
-  recovered from the
-  <a href="https://web.archive.org/web/2022/https://hypeforever.webs.com/apps/guestbook/">Internet Archive</a>,
-  which didn't save every page, so some entries are missing. Spam has been
-  removed.
-</p>
 
 <h2 id="entries">{{ entries.size }} Comments</h2>
 

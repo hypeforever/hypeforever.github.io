@@ -852,8 +852,8 @@
     }
 }
 
-// Boxed notice with an info icon on the left
-.forum-notice {
+// Boxed notice with an info icon on the left (forum and guestbook)
+.notice {
     display: flex;
     gap: 12px;
     align-items: center;
@@ -869,7 +869,7 @@
     }
 }
 
-.forum-notice-icon {
+.notice-icon {
     flex: none;
     font-size: 18px;
     color: $accent-color;
