@@ -32,7 +32,7 @@ layout: default
         <li class="photo-card">
           <a class="photo-thumb" href="{{ photo.file | relative_url }}"
              data-pswp-width="{{ photo.width }}" data-pswp-height="{{ photo.height }}">
-            <img src="{{ photo.thumb | relative_url }}" width="{{ photo.thumb_width }}" height="{{ photo.thumb_height }}" alt="{{ photo.title | escape }}" loading="lazy">
+            <img src="{{ photo.thumb | relative_url }}" width="{{ photo.thumb_width }}" height="{{ photo.thumb_height }}" alt="{% if photo.title != "" %}{{ photo.title | escape }}{% else %}{{ album.title | escape }}, photo {{ forloop.index }}{% endif %}" loading="lazy">
           </a>
           {% if photo.title != "" or photo.description != "" %}
           <div class="photo-caption">

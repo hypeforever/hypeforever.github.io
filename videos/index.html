@@ -39,7 +39,7 @@ title: Videos
         <li class="video-card{% unless video.available %} unavailable{% endunless %}">
           <a class="video-thumb" href="{{ url }}">
             {% if video.thumb %}
-            <img src="{{ video.thumb | relative_url }}" width="320" height="180" alt="" loading="lazy">
+            <img src="{{ video.thumb | relative_url }}" width="320" height="180" alt="{{ video.title | escape }}" loading="lazy">
             {% else %}
             <span class="video-placeholder"><i class="fa-solid fa-video-slash" aria-hidden="true"></i></span>
             {% endif %}

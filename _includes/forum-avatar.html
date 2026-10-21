@@ -6,7 +6,7 @@
 {% endcomment %}
 {% if include.link and include.member %}<a class="forum-avatar-link" href="{{ include.member.url | relative_url }}" tabindex="-1" aria-hidden="true">{% endif %}
 {% if include.member.avatar %}
-<img class="forum-avatar" src="{{ include.member.avatar | relative_url }}" alt="" width="80" height="80" loading="lazy">
+<img class="forum-avatar" src="{{ include.member.avatar | relative_url }}" alt="Profile picture of {{ include.name | escape }}" width="80" height="80" loading="lazy">
 {% else %}
 <span class="forum-avatar forum-avatar-placeholder" aria-hidden="true">{{ include.name | slice: 0 | upcase | escape }}</span>
 {% endif %}

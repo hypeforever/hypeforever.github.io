@@ -23,7 +23,7 @@ title: Photos
         {% assign cover = album.photos | first %}
         <li class="album-card">
           <a class="album-cover" href="{{ "/photos/" | append: album.slug | append: "/" | relative_url }}">
-            <img src="{{ cover.thumb | relative_url }}" width="{{ cover.thumb_width }}" height="{{ cover.thumb_height }}" alt="" loading="lazy">
+            <img src="{{ cover.thumb | relative_url }}" width="{{ cover.thumb_width }}" height="{{ cover.thumb_height }}" alt="{{ album.title | default: album.slug | escape }}" loading="lazy">
           </a>
           <h2 class="album-title">
             <a href="{{ "/photos/" | append: album.slug | append: "/" | relative_url }}">{{ album.title | default: album.slug }}</a>
