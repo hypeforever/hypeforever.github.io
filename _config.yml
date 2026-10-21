@@ -65,20 +65,28 @@ defaults:
       type: albums
     values:
       layout: album
+      seo:
+        type: WebPage   # jekyll-seo-tag would mark collection pages as BlogPosting
   - scope:
       type: videos
     values:
       layout: video
+      seo:
+        type: WebPage
   - scope:
       type: forum
     values:
       layout: forum-topic
       heading: The Inn (Forum)
+      seo:
+        type: WebPage   # the detailed DiscussionForumPosting comes from the layout
   - scope:
       type: members
     values:
       layout: forum-member
       heading: The Inn (Forum)
+      seo:
+        type: WebPage   # the detailed ProfilePage comes from the layout
   - scope:
       path: forum
     values:
