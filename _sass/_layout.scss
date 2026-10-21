@@ -719,3 +719,11 @@
         margin-top: 10px;
     }
 }
+
+.forum-avatar-link {
+    display: inline-block;
+
+    &:hover .forum-avatar {
+        opacity: 0.85;
+    }
+}

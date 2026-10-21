@@ -1,10 +1,13 @@
 {% comment %}
   Profile picture of a forum member. Members who kept the webs.com default
   picture get a neutral placeholder with their initial.
-  Parameters: member (document from _members, may be empty), name
+  Parameters: member (document from _members, may be empty), name,
+  link (true: the picture links to the member's profile)
 {% endcomment %}
+{% if include.link and include.member %}<a class="forum-avatar-link" href="{{ include.member.url | relative_url }}" tabindex="-1" aria-hidden="true">{% endif %}
 {% if include.member.avatar %}
 <img class="forum-avatar" src="{{ include.member.avatar | relative_url }}" alt="" width="80" height="80" loading="lazy">
 {% else %}
 <span class="forum-avatar forum-avatar-placeholder" aria-hidden="true">{{ include.name | slice: 0 | upcase | escape }}</span>
 {% endif %}
+{% if include.link and include.member %}</a>{% endif %}

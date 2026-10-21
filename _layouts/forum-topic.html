@@ -22,7 +22,7 @@ layout: page
   <li class="forum-post" id="post-{{ post.id }}">
     {% comment %}Member details below the profile picture, like on the old forum{% endcomment %}
     <div class="forum-post-member">
-      {% include forum-avatar.html member=member name=post.author %}
+      {% include forum-avatar.html member=member name=post.author link=true %}
       <div class="forum-post-member-info">
         <span class="forum-post-author">
           {% if member %}<a href="{{ member.url | relative_url }}">{{ post.author | escape }}</a>{% else %}{{ post.author | escape }}{% endif %}
