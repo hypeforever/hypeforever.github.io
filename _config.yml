@@ -20,6 +20,8 @@ github_username: hypeforever
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
 
 # Keep the URLs from the time the site lived under /blog
 permalink: /blog/:year/:month/:day/:title:output_ext
