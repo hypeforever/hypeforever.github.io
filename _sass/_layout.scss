@@ -1,4 +1,24 @@
 /**
+ * Skip link for keyboard and screen reader users: hidden until it gets focus
+ */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    z-index: 1;
+    padding: 8px 15px;
+    background: $box-color;
+    color: $text-color;
+    border-radius: 0 0 $radius-sidebar $radius-sidebar;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+    &:focus {
+        top: 0;
+        text-decoration: none;
+    }
+}
+
+/**
  * Page frame
  */
 .site {
@@ -799,6 +819,17 @@
     p {
         margin-bottom: 0;
     }
+}
+
+// Labels in the profile box ("General Info", "Signature"), styled like an h3
+// but not headings: the box already has the h1, and the next heading is an h2
+.box-content .forum-profile-heading {
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: $heading-color;
 }
 
 // Member details below the profile picture in a topic; on phones they move

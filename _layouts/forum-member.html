@@ -37,12 +37,12 @@ layout: page
 </div>
 
 {% if page.general_info.size > 0 %}
-<h3>General Info</h3>
+<p class="forum-profile-heading">General Info</p>
 <p>{% for line in page.general_info %}{{ line | escape }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}</p>
 {% endif %}
 
 {% if page.signature != "" %}
-<h3>Signature</h3>
+<p class="forum-profile-heading">Signature</p>
 <div class="forum-signature">
   {{ page.signature }}
 </div>
