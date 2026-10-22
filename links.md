@@ -22,7 +22,7 @@ dedicated or related to Hype The Time Quest
   intends to film a movie based on Hype. He has been actively registering the
   filming activity in this blog, check it out!
 - [https://www.fisicx.com/hype/index.html](https://www.fisicx.com/hype/index.html) -
-  This site has many things on Hype: Waltroughs, Cheats, Hints, Beehive Game
+  This site has many things on Hype: Walkthroughs, Cheats, Hints, Beehive Game
   locations and more!
 - [https://www.ubi.com](https://www.ubisoft.com/) - The game developers' company
   website.

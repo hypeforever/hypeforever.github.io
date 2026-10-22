@@ -30,7 +30,7 @@ To do this, you'll need to emulate a glide graphic board:
 2. Then find the file **glide3x.dll** inside your *"C:\Windows\System32"*
    folder and copy it to Hype's installation directory (Default is
    *C:\Ubi Soft\Hype - The time quest*)
-3. Then, right-click the "MaiDFXvr_bleu.exe" file and select "proprierties"
+3. Then, right-click the "MaiDFXvr_bleu.exe" file and select "properties"
 4. Set the compatibility to **"Windows 95 or 98\me"**
 5. Check all the boxes in the compatibility tab, specially "Run as
    Administrator"
@@ -121,7 +121,7 @@ you get the savegame error in the German version:
 
 ## Hype The Time Quest - Polish Version
 
-Our memeber Spardo has created and uploaded a complete version of Hype - The
+Our member Spardo has created and uploaded a complete version of Hype - The
 Time Quest installation folders for those who want to play it. It's a complete
 install with nGlide, patches, savegame fix and all - although you'll still need
 the cd to play it. Please visit this thread for more information. Also, be kind

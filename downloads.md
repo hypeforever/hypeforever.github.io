@@ -73,7 +73,7 @@ game under newer systems. You can download it here
 
 ### Hype Complete Polish Version
 
-Our memeber [Spardo]({{ "/forum/members/108361662-spardo/" | relative_url }}) has
+Our member [Spardo]({{ "/forum/members/108361662-spardo/" | relative_url }}) has
 created and uploaded a complete version of Hype - The Time Quest installation
 folders for those who want to play it. It's a complete install with nGlide,
 patches, savegame fix and all - although you'll still need the cd to play it.

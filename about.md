@@ -52,6 +52,6 @@ the moment.
   [Bearmadrid]({{ "/forum/members/113647136-bearmadrid/" | relative_url }}),
   [Melted Plastyk]({{ "/forum/members/116937282-melted-plastyk/" | relative_url }}) and
   others.
-  When we have something ready, it will be avaliable here on Hype Forever, as a
+  When we have something ready, it will be available here on Hype Forever, as a
   free download for everyone. Special thanks for Marin (Enost), who is helping
   me to coordinate the project, as the co-project leader.

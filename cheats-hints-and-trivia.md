@@ -22,7 +22,7 @@ Type these codes in-game.
 | `hermetik` | infinite magic |
 | `houdini` | infinite arrows |
 | `pouletfrit` | boots |
-| `tourtundini` | destroiys armor |
+| `tourtundini` | destroys armor |
 | `grolot` | add one item of each type of potion and herbs |
 | `frik` | extra money |
 | `tunnel` | change view |
