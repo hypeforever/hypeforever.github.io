@@ -1,12 +1,14 @@
 # Site settings
 # Changes to this file are not picked up by `jekyll serve`, restart the server instead.
 title: "Hype: The Time Quest Forever"
+tagline: "Fan site for Hype: The Time Quest"   # title of the home page: "<title> | <tagline>"
 description: >
   Fan site for the game Hype: The Time Quest, with cheats, downloads,
   music, photos, videos and the Hype Forever blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hypeforever.github.io" # the base hostname & protocol for your site
 lang: en
+locale: en_US   # og:locale (Facebook expects language_TERRITORY)
 # Same time zone as the GitHub Pages build; archive dates carry no time zone
 timezone: UTC
 
@@ -50,9 +52,8 @@ collections:
     output: true
     permalink: /videos/:name/
 
-# Large preview card when pages are shared on social media (jekyll-seo-tag)
-twitter:
-  card: summary_large_image
+# Social media preview: jekyll-seo-tag uses a large image card by default.
+# (No `twitter:` block here: it would output an empty twitter:site tag.)
 
 defaults:
   # Preview image for social media (1200x630), used by every page without its own image

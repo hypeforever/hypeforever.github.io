@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Cheats, Hints and Trivia
+description: "Cheat codes for Hype: The Time Quest, the hidden Gogoud's Manor key combination, the debug mode, hints for hard parts of the game and trivia."
 permalink: /cheats-hints-and-trivia/
 ---
 

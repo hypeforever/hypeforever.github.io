@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Links
+description: "Fan sites and projects around Hype: The Time Quest: hype.tips, the Hype film project, walkthroughs, cheats and more."
 permalink: /links/
 ---
 

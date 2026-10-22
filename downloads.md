@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Downloads
+description: "Downloads for Hype: The Time Quest: the demo, save game files for every era, save folders for the German and Polish versions and the soundtrack."
 permalink: /downloads/
 ---
 

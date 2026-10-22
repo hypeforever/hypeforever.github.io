@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Bugs and Problems
+description: "How to run Hype: The Time Quest on modern Windows, Mac and Linux: nGlide, patches, ubi.ini tweaks, the savegame error fix and 64-bit installation."
 permalink: /bugs-and-problems/
 ---
 

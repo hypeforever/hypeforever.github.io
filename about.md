@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Hype Forever
+description: "How Hype Forever started in 2009 as a fan site for Hype: The Time Quest, the story of its community and the Hype Project remake."
 permalink: /about/
 ---
 

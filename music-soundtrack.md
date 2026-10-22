@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Music – Soundtrack
+description: "Listen to the complete original soundtrack of Hype: The Time Quest (1999), composed by Robbi Finkel."
 permalink: /music-soundtrack/
 ---
 
