@@ -15,7 +15,7 @@ just like everything else of this project.
 On the following screenshot, you can see the original model. It's the building
 on the left.
 
-![Original model]({{ site.baseurl }}/assets/first-model/original-model.jpg)
+![Original model]({{ site.baseurl }}/assets/first-model/original-model.jpg){: width="636" height="307"}
 
 The screenshot is taken from Frogoggy's awesome [Let's Play](https://youtu.be/H6LZHPSPK1Q)!
 
@@ -24,6 +24,6 @@ The screenshot is taken from Frogoggy's awesome [Let's Play](https://youtu.be/H6
 The new model consists of ~4,500 triangles. In Unity, it uses three materials
 (wood, glas & walls/etc). The screenshots are ingame screenshots.
 
-![Overview]({{ site.baseurl }}/assets/first-model/overview.jpg)
-![Detail]({{ site.baseurl }}/assets/first-model/detail.jpg)
-![Roof]({{ site.baseurl }}/assets/first-model/roof.jpg)
+![Overview]({{ site.baseurl }}/assets/first-model/overview.jpg){: width="1440" height="900"}
+![Detail]({{ site.baseurl }}/assets/first-model/detail.jpg){: width="1440" height="900"}
+![Roof]({{ site.baseurl }}/assets/first-model/roof.jpg){: width="1440" height="900"}
